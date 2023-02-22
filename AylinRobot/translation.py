@@ -24,11 +24,11 @@ class Translation(object):
 ║▻ 🌀 Bot Versiyası: v0.7.0
 ║▻ 🍀 Pyrogram Versiyası: 1.4.16
 ║▻ ⚡ Python Versiyası: 3.11.1
-║▻ ⚙️ Server [Heroku](https://heroku.com)
-║▻ 📆 Botun istifadəyə verilmə tarixi `13.03.2023` 
+║▻ ⚙️ Server: [Heroku](https://heroku.com)
+║▻ 📆 Botun istifadəyə verilmə tarixi: `13.03.2023` 
 ╚═════════════════
 ╔═════════════════
-║▻ **⚠️ Qeyd: botun qrupunuzda işləməsi üçün admin əmrlərindən sadəcə "Mesaj Silmə" yetkisi verin**
+║▻ **⚠️ Qeyd: Botun qrupunuzda işləməsi üçün admin əmrlərindən sadəcə (Mesaj Silmə) yetkisi verin**
 ╚═════════════════
 """
 
