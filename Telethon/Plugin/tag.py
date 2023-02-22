@@ -579,8 +579,5 @@ async def handler(event):
 
 Aylin = (
     "Az tağ elə sahibimi😒",
-    "Sahibim birazdan gələcək çox tag eləmə😒"
-    "Adə az tag elə sahibimi😑"
-    "Birazdan gələcək işi var🙄"
-    "",
+    "Sahibim birazdan gələcək çox tag eləmə😒",
 )
