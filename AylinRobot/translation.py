@@ -68,7 +68,7 @@ class Translation(object):
 ║▻ 📃 Açıqlama: Musiqi yükləyər.
 ║
 ║▻ 🔮 İstifadə: /video
-║▻ 🧩  Nümunə:/video Rei - Ah Canım Sevgilim
+║▻ 🧩  Nümunə: /video Rei - Ah Canım Sevgilim
 ║▻ 📃 Açıqlama: Video yükləyər.
 ║
 ║▻ 🔮 İstifadə: /lyrics 
@@ -88,7 +88,7 @@ class Translation(object):
     SEHID_TEXT = """
 ╔═════════════════
 ║▻ 🔮 İstifadə: /sehid 
-║▻ 📃 Açıqlama:  Bu əmr vasitəsilə bot sizə **Şəhid** adları göndərəcək
+║▻ 📃 Açıqlama: Bu əmr vasitəsilə bot sizə **Şəhid** adları göndərəcək
 ╚═════════════════
 ╔═════════════════
 ║▻ 🥀 **Allah bütün Şəhidimizə rəhmət eləsin**
