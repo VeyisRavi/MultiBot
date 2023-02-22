@@ -1,22 +1,24 @@
 # @AylinRobot
-  # Sahib @HuseynH
-  # Repo Açığdısa İcazəsis Götürmə Oğlum
-  
-  import time
-  from AylinRobot import AylinRobot as app
-  from pyrogram import Client, filters
-  from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message
-  from AylinRobot.config import Config
-  from datetime import datetime
-  from os import path
-  from time import time
-  from pyrogram.errors import FloodWait
-  from sys import version_info
-  from helpers import __version__
-  from pyrogram import __version__ as pyrover
-  __major__ = 0
-  __minor__ = 2
-  __micro__ = 1
+# Sahib @HuseynH
+# Repo Açığdısa İcazəsis Götürmə Oğlum
+
+import time
+from AylinRobot import AylinRobot as app
+from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message
+from AylinRobot.config import Config
+from datetime import datetime
+from os import path
+from time import time
+from pyrogram.errors import FloodWait
+from sys import version_info
+from helpers import __version__
+from pyrogram import __version__ as pyrover
+__major__ = 0
+__minor__ = 2
+__micro__ = 1
+
+__python_version__ = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
   
   __python_version__ = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
   
