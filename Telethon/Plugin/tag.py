@@ -69,7 +69,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("**📌 Tağ Edə Bilməyim Üçün Səbəb Yaz**")
   else:
-    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\n**ℹ `/tag Salam`**")
+    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur!**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\nℹ `/tag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -139,7 +139,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("**📌 Tağ Edə Bilməyim Üçün Səbəb Yazın!**")
   else:
-    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur.**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\n**ℹ `/tektag Salam`**")
+    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur!**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\nℹ `/tektag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -290,7 +290,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("**📌 Tağ Edə Bilməyim Üçün Səbəb Yazın!**")
   else:
-    return await event.respond("**❌ Tağ Edmək Üçün Bir Səbəb Yoxdur\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\n**ℹ `/etag Salam`**")
+    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur!**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\nℹ `/etag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -368,7 +368,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("**📌 Tağ Edə Bilməyim Üçün Səbəb Yazın!**")
   else:
-    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur!**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\n**ℹ `/rtag Salam`**")
+    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur!**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\nℹ `/rtag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -446,7 +446,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("**📌 Tağ Edə Bilməyim Üçün Səbəb Yazın!**")
   else:
-    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur!**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\n**ℹ `/btag Salam`**")
+    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur!**\n**✅ Tağ Edə Bilməyim Üçün Səbəb Yazın**\nℹ `/btag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
