@@ -193,9 +193,9 @@ photolist = [
 @app.on_message(filters.command(["soxri"]))
 async def soxri(bot: app, m: Message):
     start = time()
-    replymsg = await m.reply_text("**❤ Rondom Bir Şəkil Seçilir...**")
+    replymsg = await m.reply_text("**❤ Random bir şəkil seçilir...**")
     end = round(time() - start, 2)
     photo = random.choice(photolist)
-    text = f"❤️ **{Config.BOT_USERNAME} Sizin Üçün Rondom Bir Şəkil Seçdi**"
+    text = f"❤️ **{Config.BOT_USERNAME} sizin üçün random bir şəkil seçdi**"
     await bot.send_photo(m.chat.id, photo=photo, caption=text)
     await replymsg.delete()
