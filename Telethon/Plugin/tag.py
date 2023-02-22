@@ -569,9 +569,9 @@ userjoin = (
 
 
 @client.on(events.NewMessage(pattern='@Rahid_7'))
-@client.on(events.NewMessage(pattern='Rahid_7'))
-@client.on(events.NewMessage(pattern='Rahid'))
-@client.on(events.NewMessage(pattern='Rakos'))
+@client.on(events.NewMessage(pattern='@Rahid_7'))
+@client.on(events.NewMessage(pattern='@Rahid_7'))
+@client.on(events.NewMessage(pattern='@Rahid_7'))
 async def handler(event):
     await event.reply(random.choice(Aylin))
 
@@ -579,5 +579,6 @@ async def handler(event):
 
 Aylin = (
     "Az tağ elə sahibimi😒",
-    "Sahibim birazdan gələcək çox tağ eləmə😒",
+    "Sahibim birazdan gələcək çox tağ eləmə😒"
+    "İşi var birazdan gələcək👀",
 )
