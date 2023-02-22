@@ -591,5 +591,7 @@ Aylin = (
     "Burda deyil yəqin başqa qrupdadı😂",
     "Haycan balam🙈",
     "Sahibim burda olmasada qəlbi sizinlədir😌",
+    "Burda yoxdur kömək üçün mənə deyə bilərsən😇",
+    "@Rahid_7 səni çağırır qaqaş👀",
     ""
 )
