@@ -33,16 +33,16 @@ async def github(_, message):
                 followers = result['followers']
                 following = result['following']
                 caption = f"""**Info Of {name}**
-👨🏻‍💻İstifadəçi adı: {username}
-🗣️Bio: {bio}
-🔗Profil linki: [Here]({url})
-👤Şirkət: {company}
-📅Yaradılma tarixi: {created_at}
-📔Depolar: {repositories}
-🛄Blog: {blog}
-🌐Məkan: {location}
-👁️‍🗨️İzləyicilər: {followers}
-👁️‍🗨️İzlədikləri: `{following}`"""
+👨🏻‍💻 İstifadəçi adı: {username}
+☣️ Bio: {bio}
+🔗 Profil linki: [Here]({url})
+👤 Şirkət: {company}
+📅 Yaradılma tarixi: {created_at}
+📔 Depolar: {repositories}
+🛄 Blog: {blog}
+🌐 Məkan: {location}
+👁️‍🗨️ İzləyicilər: {followers}
+👁️‍🗨️ İzlədikləri: `{following}`"""
             except Exception as e:
                 print(str(e))
                 pass
