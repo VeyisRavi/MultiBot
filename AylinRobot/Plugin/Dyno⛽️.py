@@ -51,14 +51,14 @@ async def bot_status(client,message):
                 leftperc = math.floor(quota_left / total_quota * 100)
 
                 quota_details = f"""
-💫SERVER STATUSU💫
+💫 SERVER STATUSU 💫
 💠 Toplam dyno ➪ {total} saat !
  
 💠 Dyno istifadə olunub ➪ {used} Saat ( {usedperc}%)
         
 💠 Dyno qalıb ➪ {hours} Saat ( {leftperc}% )
         
-💠 Təxmini günlər ➪ {days} gün qaldı!"""
+💠 Təxmini günlər ➪ {days} gün qaldı."""
 
             else:
                 quota_details = ""
