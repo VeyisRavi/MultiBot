@@ -28,5 +28,5 @@ class Config:
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "RAHİD")
    CHANNEL = os.environ.get("CHANNEL", "Rahid_44")
    SUPPORT = os.environ.get("SUPPORT", "Cenublar")
-   ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/425d1e4790954b3d29e87.mp4") 
-   START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/b2c2ed59a89933a384ae3.jpg")
+   ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/33c593637f4766883abed.mp4") 
+   START_IMG = os.environ.get("START_IMG", "https://te.legra.ph/file/aef1bdf8ef30b6ced6bbc.jpg")
