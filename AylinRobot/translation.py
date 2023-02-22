@@ -9,24 +9,19 @@ class Translation(object):
 
     START_TEXT = """
 ╔═════════════════
-║▻ **🙋‍♀️ Salam {}**
+║▻ **🙋🏻 Salam {}**
 ║
-║▻ 🙋‍♀️ Mənim Adım  ️️️️️️🙎‍♀️ [{}](https://t.me/{}) Mən 
-║▻ 🇦🇿 Azərbaycan Dilində Çox Özəllikili 
-║▻ 💌 Telegram Botuyam Bacarıqlarımı Görmək Üçün
-║▻ `📚 Kömək` Buttonuna Toxun
+║▻  Mənim Adım [{}](https://t.me/{})
+║▻ 🇦🇿 Azərbaycan dilində çox özəllikli telegram botuyam vacarıqlarımı görmək üçün Kömək butonuna daxil olun
 ╚═════════════════
-👨‍💻 **Sahibim** ♒️ @{}
+👨🏻‍💻 **Bot Sahibi** @{}
 
 """    
     HELP_TEXT = """
 ╔═════════════════
-║▻ **🙋‍♀️ Salam {} 
+║▻ **🙋🏻 Salam {} 
 ║
-║▻ 💁‍♀️ ️️️️️️ [{}](https://t.me/{})- Un  
-║▻ 📚 Əmrləri  Bunlardır Aşağıdakı 
-║▻ 🖲 Buttonlara Toxunaraq istədiyiniz
-║▻ ✔️ Əmr Haqqında Məlumat Ala Bilərsiniz 
+║▻ 💁🏻 ️️️️️️ [{}](https://t.me/{})-un əmrləri bunlardır aşağıdakı butonlara daxil olaraq istədiyiniz əmrləri öyrənə bilərsiniz
 ╚═════════════════
 """
 
@@ -34,80 +29,78 @@ class Translation(object):
 
     BH_TEXT = """
 ╔═════════════════
-║▻ **🙋‍♀️ Salam {} 
+║▻ **🙋🏻 Salam {} 
 ║
-║▻ 🙎‍♀️ [{}](https://t.me/{}) 🇦🇿 Azərbaycan Dilində Çox Özəllikli Telegram Botudur...**
+║▻ 🙎🏻 [{}](https://t.me/{}) 🇦🇿 Azərbaycan dilində çox özəllikli telegram botudur.**
 ║
-║▻ ✨ Bot Versiyası: v0.7.0
+║▻ 🌀 Bot Versiyası: v0.7.0
 ║▻ 🍀 Pyrogram Versiyası: 1.4.16
-║▻ ✨ Python Versiyası: 3.11.1
+║▻ ⚡ Python Versiyası: 3.11.1
 ║▻ ⚙️ Server [Heroku](https://heroku.com)
-║▻ 📆 Botun İstifadəyə Verilmə Tarixi `20.11.2022` 
+║▻ 📆 Botun istifadəyə verilmə tarixi `13.03.2023` 
 ╚═════════════════
 ╔═════════════════
-║▻ **⚠️ Qeyd Botun Qrupunuzda İşləməsi 
-║▻ Üçün Admin Əmirlərindən Sadəcə 
-║▻ 💬 Mesajları Silmə 🚫 Yetkisi Verin**
+║▻ **⚠️ Qeyd: botun qrupunuzda işləməsi üçün admin əmrlərindən sadəcə "Mesaj Silmə" yetkisi verin**
 ╚═════════════════
 """
 
 
     SAHIB_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /stats
+║▻ 🔮 İstifadə: /stats
 ║▻ 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
 ║
-║▻ 🔮 Istifadə: /block
-║▻ 📃 Açıqlama: İstifadəçini Və Ya Qrupu Bloklayar.
+║▻ 🔮 İstifadə: /block
+║▻ 📃 Açıqlama: İstifadəçini və ya qrupu bloklayar.
 ║
-║▻ 🔮 Istifadə: /unblock
-║▻ 📃 Açıqlama: Bloku Açar.
+║▻ 🔮 İstifadə: /unblock
+║▻ 📃 Açıqlama: İstifadəçini və ya qrupun bloku açar.
 ║
-║▻ 🔮 Istifadə: /blocklist
+║▻ 🔮 İstifadə: /blocklist
 ║▻ 📃 Açıqlama: Blok olunanların siyahısını göstərər.
 ║
-║▻ 🔮 Istifadə: /broadcastall
-║▻ 📃 Açıqlama: Qrupa Və Şəxsiyə Yayım Edər.
+║▻ 🔮 İstifadə: /broadcastall
+║▻ 📃 Açıqlama: Qrupa və şəxsiyə yayım edər.
 ║
-║▻ 🔮 Istifadə: /gcast
+║▻ 🔮 İstifadə: /gcast
 ║▻ 📃 Açıqlama: Qruplarda yayım edər.
 ║
-║▻ 🔮 Istifadə: /broadcast_pin
-║▻ 📃 Açıqlama: Qruplarda yayım edər və pinləyər.
+║▻ 🔮 İstifadə: /broadcast_pin
+║▻ 📃 Açıqlama: Qruplarda yayım edər və sabitləyər.
 ║
-║▻ 🔮 Istifadə: /dyno
-║▻ 📃 Açıqlama: Heroku Dyno Miqdarını Ölçər.
+║▻ 🔮 İstifadə: /dyno
+║▻ 📃 Açıqlama: Heroku dyno miqdarını ölçər.
 ╚═════════════════
 """
 
     MUSIC_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /song 
+║▻ 🔮 İstifadə: /song 
 ║▻ 🧩 Nümunə: /song Rei - Ah Canım Sevgilim
-║▻ 📃 Açıqlama: Musiqi yükləyir.
+║▻ 📃 Açıqlama: Musiqi yükləyər.
 ║
-║▻ 🔮 Istifadə: /video
+║▻ 🔮 İstifadə: /video
 ║▻ 🧩  Nümunə:/video Rei - Ah Canım Sevgilim
-║▻ 📃 Açıqlama: Video yükləyir.
+║▻ 📃 Açıqlama: Video yükləyər.
 ║
-║▻ 🔮 Istifadə: /lyrics 
+║▻ 🔮 İstifadə: /lyrics 
 ║▻ 🧩 Nümunə: /lyrics Rei - Ah Canım Sevgilim
 ║
-║▻ 📃 Açıqlama: Musiqinin sözlərini tapır.
+║▻ 📃 Açıqlama: Musiqinin sözlərini tapar.
 ╚═════════════════
 """
 
     TELEGRAPH_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /tgm
+║▻ 🔮 İstifadə: /tgm
 ║▻ 📃 Açıqlama: Şəkil, video və ya GIF göndərərək link ala bilərsiniz.
 ╚═════════════════
 """
 
     SEHID_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /sehid 
-║▻ 📃 Açıqlama:  Bu əmr vaistəsiylə sizə **Şəhid** adları göndərəcəm
+║▻ 🔮 İstifadə: /sehid 
+║▻ 📃 Açıqlama:  Bu əmr vasitəsilə bot sizə **Şəhid** adları göndərəcək
 ╚═════════════════
 ╔═════════════════
 ║▻ 🥀 **Allah bütün Şəhidimizə rəhmət eləsin**
@@ -118,70 +111,70 @@ class Translation(object):
 """ 
     OYUN_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /zer
-║▻ 📃 Açıqlama: zər atar
+║▻ 🔮 İstifadə: /zer
+║▻ 📃 Açıqlama: Zər atar
 ║
-║▻ 🔮 Istifadə: /top
-║▻ 📃 Açıqlama: top atar
+║▻ 🔮 İstifadə: /top
+║▻ 📃 Açıqlama: Top atar
 ║
-║▻ 🔮 Istifadə: /bowling
-║▻ 📃 Açıqlama: bowling atar
+║▻ 🔮 İstifadə: /bowling
+║▻ 📃 Açıqlama: Bowling atar
 ║
-║▻ 🔮 Istifadə: /ox
-║▻ 📃 Açıqlama: ox atar
+║▻ 🔮 İstifadə: /ox
+║▻ 📃 Açıqlama: Ox atar
 ║
-║▻ 🔮 Istifadə: /jackpot
-║▻ 📃 Açıqlama: jackpot atar
+║▻ 🔮 İstifadə: /jackpot
+║▻ 📃 Açıqlama: Jackpot atar
 ║
-║▻ 🔮 Istifadə: /basket
-║▻ 📃 Açıqlama: basket atar
+║▻ 🔮 İstifadə: /basket
+║▻ 📃 Açıqlama: Basket atar
 ╚═════════════════
 """
 
     EYLENCE_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /soxri 
-║▻ 📃 Açıqlama: Rondom 16+ Şəkillər Atar.
+║▻ 🔮 İstifadə: /soxri 
+║▻ 📃 Açıqlama: 16+ şəkillər atar.
 ║
-║▻ 🔮 Istifadə: /pisik
-║▻ 📃 Açıqlama: Rondom Pişik Şəkili Atar
+║▻ 🔮 İstifadə: /pisik
+║▻ 📃 Açıqlama: Pişik şəkili atar.
 ║
-║▻ 🔮 Istifadə: /anime
-║▻ 📃 Açıqlama: Rondom Anime Şəkili Atar
+║▻ 🔮 İstifadə: /anime
+║▻ 📃 Açıqlama: Anime şəkilər atar.
 ║
-║▻ 🔮 Istifadə: /masin
-║▻ 📃 Açıqlama: Rondom Maşın Şəkili Atar
+║▻ 🔮 İstifadə: /masin
+║▻ 📃 Açıqlama: Maşın şəkilər atar.
 ║
-║▻ 🔮 Istifadə: /masin2
-║▻ 📃 Açıqlama: Rondom Maşın Videosu Atar
+║▻ 🔮 İstifadə: /masin2
+║▻ 📃 Açıqlama: Maşın videolar atar.
 ║
-║▻ 🔮 Istifadə: /tema
-║▻ 📃 Açıqlama: Rondom Telegram Teması Atar
+║▻ 🔮 İstifadə: /tema
+║▻ 📃 Açıqlama: Telegram temalar atar.
 ║
-║▻ 🔮 Istifadə: /pp
-║▻ 📃 Açıqlama: Rondom Profil Şəkili Atar
+║▻ 🔮 İstifadə: /pp
+║▻ 📃 Açıqlama: Profil şəkillər atar.
 ║
-║▻ 🔮 Istifadə: /sevgi
-║▻ 📃 Açıqlama: Hazır Sevgi Yə Aid Sözlər Atar.
+║▻ 🔮 İstifadə: /sevgi
+║▻ 📃 Açıqlama: Sevgi sözlər atar.
 ║
-║▻ 🔮 Istifadə: /bio
-║▻ 📃 Açıqlama: Hazır Bio Nuz Üçün Sözlər Atar.
+║▻ 🔮 İstifadə: /bio
+║▻ 📃 Açıqlama: Bio sözlər atar.
 ╚═════════════════
 """
 
 
     ELAVELER_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /carbon
-║▻ 📃 Açıqlama: Yazdığınız mesajı şəkilə çevirin
+║▻ 🔮 İstifadə: /carbon
+║▻ 📃 Açıqlama: Yazdığınız mesajı şəkilə çevirər.
 ║
-║▻ 🔮 Istifadə: /id
-║▻ 📃 Açıqlama: İstifadəçinin ID alın.
+║▻ 🔮 İstifadə: /id
+║▻ 📃 Açıqlama: İstifadəçi ID atar.
 ║
-║▻ 🔮 Istifadə: /info
-║▻ 📃 Açıqlama: İstifadəçi haqqında məlumat verər
+║▻ 🔮 İstifadə: /info
+║▻ 📃 Açıqlama: İstifadəçi haqqında məlumat atar.
 ║
-║▻ 🔮 Istifadə: /alive
+║▻ 🔮 İstifadə: /alive
 ║▻ 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
 ╚═════════════════
 """
@@ -189,11 +182,11 @@ class Translation(object):
 
     AXTARIS_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /github 
-║▻ 🧩 Nümunə: /github HesenovHuseyn
-║▻ 📃 Açıqlama: Github Axtarışı Edər.
+║▻ 🔮 İstifadə: /github 
+║▻ 🧩 Nümunə: /github Rahid2003
+║▻ 📃 Açıqlama: Github axtarışı edər.
 ║
-║▻ 🔮 Istifadə: /search
+║▻ 🔮 İstifadə: /search
 ║▻ 🧩 Nümunə: /search Rei - Ah Canım Sevgilim
 ║▻ 📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
 ╚═════════════════
@@ -201,23 +194,23 @@ class Translation(object):
 
     TAGGER_TEXT = """
 ╔═════════════════
-║▻ 🔮 Istifadə: /tag
-║▻ 👤 Açıqlama: [Səbəb] - 5 - Li Tağ.
+║▻ 🔮 İstifadə: /tag
+║▻ 👥 Açıqlama: 5-li tağ edər.
 ║
-║▻ 🔮 Istifadə: /ttag
-║▻ 👥 Açıqlama: [Səbıb] - Təkli Tağ.
+║▻ 🔮 İstifadə: /ttag
+║▻ 👤 Açıqlama: Təkli tağ edər.
 ║
-║▻ 🔮 Istifadə: /stag
-║▻ 🗨 Açıqlama: Maraqlı Sözlərlə Tağ.
+║▻ 🔮 İstifadə: /stag
+║▻ 📜 Açıqlama: Maraqlı sözlərlə tağ edər.
 ║
-║▻ 🔮 Istifadə: /etag
-║▻ 😑 Açıqlama: [Səbəb] - Emoji İlə Tağ.
+║▻ 🔮 İstifadə: /etag
+║▻ 🥰 Açıqlama: Emoji ilə tağ edər.
 ║
-║▻ 🔮 Istifadə: /btag
-║▻ 🏁 Açıqlama: [Səbəb] - Bayraqlarla Tağ
+║▻ 🔮 İstifadə: /btag
+║▻ 🏴 Açıqlama: Bayraqlarla tağ edər.
 ║
-║▻ 🔮 Istifadə: /admin
-║▻ 👮‍♀️ Açıqlama: Adminlərin Toplu Siyahısı
+║▻ 🔮 İstifadə: /admin
+║▻ 👨‍⚖️ Açıqlama: Qrup adminlərin siyahısı atar.
 ╚═════════════════
 """
 
@@ -230,19 +223,19 @@ class LAN(object):
 
 
     BILDIRIM = """
-```📣 Yeni İsmarıc``` \n\n#YENI_ISTIFADƏÇİ **botu başlatdı!** \n\n🏷 isim: `{}` \n📮 istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})"""
+```**🆕 Yeni İstifadəçi bota start etdi**```\n\n👤: {}\n🆔 `{}`\n🔗 [{}](tg://user?id={})"""
     GRUP_BILDIRIM = """
-```📣 Yeni İsmarıc``` \n\n#YENI_QRUP **botu başlatdı!** \n\n🏷 Qrupa əlavə edən: `{}` \n📮 Qrupa əlavə edən istifadəçi id: `{}` \n🧝🏻‍♂️ profil linki: [{}](tg://user?id={})\n Qrupun adı: {}\n Qrupun ID: {}\n Qrupun mesaj kinki( sadəcə açıq qruplar): [Buraya Toxun](https://t.me/c/{}/{})
+```**🆕 Yeni İstifdəçi bota qrupda start etdi**```\n\n👤 Qrupa əlavə edən: `{}`\n🆔 Qrupa əlavə edən istifadəçi id: `{}`\n🔗 Profil linki: [{}](tg://user?id={})\nQrupun Adı: {}\nQrupun ID: {}\nQrupun mesaj linki (Sadəcə açıq qruplar): [Bura Toxun](https://t.me/c/{}/{})
 
 """
     SAHIBIME = """
 sahibimə
 """
     PRIVATE_BAN = """
-Məyusam, əngəlləndiniz! Bunun bir xəta olduğunu düşünürsünüz isə {} yazın.
+Məyusam, əngəlləndiniz! Bunun bir xəta olduğunu düşünürsünüzsə {} yazın.
  """
     GROUP_BAN = """
-Məyusam, qrupunuz qara siyahıya əlavə olundu! Artıq burada qala bilmərəm! Bunun bir xəta olduğunu düşünürsünüz isə {} yazın.'
+Məyusam, qrupunuz qara siyahıya əlavə olundu! Artıq burada qala bilmərəm! Bunun bir xəta olduğunu düşünürsünüzsə {} yazın.'
 """
     NOT_ONLINE = """
 aktiv deyil
@@ -254,49 +247,44 @@ botu əngəlləyib
 istifadəçi id'i yanlışdır.
 """
     BROADCAST_STARTED = """
-```📤 BroadCast başladıldı! Bitəndə mesaj alacaqsınız.
+```📤 BroadCast başladıldı! Bitəndə mesaj göndərəcəm.
 """
     BROADCAST_STOPPED = """
-✅ ```Broadcast uğurla tamamlandı.``` \n\n**Bu qədər vaxtda tamamlandı** `{}` \n\n**Ümumi istifadəçilər:** `{}` \n\n**Ümumi göndərmə cəhdləri:** `{}` \n\n**Uğurla göndərilən:** `{}` \n\n**Ümumi xəta:** `{}`
+✅ ```Broadcast uğurla tamamlandı.```\n\n**Bu qədər vaxtda tamamlandı** `{}`\n\n**Ümumi istifadəçilər:** `{}`\n\n**Ümumi göndərmə cəhdləri:** `{}`\n\n**Uğurla göndərilən:** `{}`\n\n**Ümumi xəta:** `{}`
 """
     STATS_STARTED = """
 {} **Zəhmət olmasa gözləyin, bilgiləri gətirirəm!**
 """
     STATS = """
-**@{} Məlumatları**\n\n**İstifadəçiləri;**\n» **Ümumi söhbətlər:** `{}`\n» **Ümumi qruplar: `{}`\n» **Ümumi PM's: `{}`\n\n**Disk İstifadəsi;**\n» **Disk'in Sahəsi:** `{}`\n» **İstifadə edilən:** `{}({}%)`\n» **Boş qalan:** `{}`\n\n**🎛 Ən yüksək istifadə dəyərləri;**\n» **CPU:** `{}%`\n» **RAM:** `{}%`\n**Versiyalar;**\n» **Pyrogram:** {}
+**@{} Məlumatları**\n\n**İstifadəçiləri;**\n» Ümumi Söhbətlər: `{}`\n» Ümumi Qruplar: `{}`\n» Ümumi PM's: `{}`\n\n**Disk İstifadəsi;**\n» Disk'in Sahəsi: `{}`\n» İstifadə Edilən: `{} ({}%)`\n» Boş Qalan: `{}`\n\n**🎛 Ən yüksək istifadə dəyərləri;**\n» CPU: `{}%`\n» RAM: `{}%`\n» Pyrogram: {}
 """
     BAN_REASON = """
-Bu sebep yasaklandığınız için @{} tarafından otomatik olarak oluşturulmuştur
-"""
+Bu səbəbdən qadağan olundunuz @{} tərəfindən avtomatik olaraq yaradılmışdır."""
     NEED_USER = """
-**Zəhmət olmasa istifadəçi id'si verin.**
+**Zəhmət olmasa istifadəçi ID'si yazın.**
 """
     BANNED_GROUP = """
-🚷 **Qadağan olundu!\n\nQadağan edən:** {}\n**Qrup ID:** `{}` \n**Vaxt:** `{}` \n**Səbəb:** `{}`
+🚷 **Qadağan olundu!\n\nQadağan edən:** {}\n**Qrup ID:** `{}`\n**Vaxt:** `{}`\n**Səbəb:** `{}`
 """
     AFTER_BAN_GROUP = """
-**Məyusam, qrupunuz qara siyahıya əlavə edildi! \n\nSəbəb:** `{}`\n\n**Artıq burada qala bilmərəm. Bunun bir xəta olduğunu düşünürsünüzsə, dəstək qrupuna gəlin.**
+**Məyusam, qrupunuz qara siyahıya əlavə edildi!\n\nSəbəb:** `{}`\n\n**Artıq burada qala bilmərəm. Bunun bir xəta olduğunu düşünürsünüzsə, dəstək qrupuna gəlin.**
 """
-    GROUP_BILGILENDIRILDI = """
-\n\n✅ **Qrupu bilgiləndirdim və qrupdan çıxdım.**
+    GROUP_BILGILENDIRILDI = """\n\n✅ **Qrupu bilgiləndirdim və qrupdan çıxdım.**
 """
-    GRUP_BILGILENDIRILEMEDI = """
-\n\n❌ **Qrupu məlumatlandırarkən xəta yarandı:** \n\n`{}`
+    GRUP_BILGILENDIRILEMEDI = """\n\n❌ **Qrupu məlumatlandırarkən xəta yarandı:**\n\n`{}`
 """
     USER_BANNED = """
-🚷 **Qadağan olundu! \n\nQadağan edən:** {}\n **İstifadəçi ID:** `{}` \n**Vaxt:** `{}` \n**Səbəb:** `{}`
+🚷 **Qadağan olundu\n\nQadağan edən:** {}\n **İstifadəçi ID:** `{}`\n**Vaxt:** `{}`\n**Səbəb:** `{}`
 """
     AFTER_BAN_USER = """
 **Məyusam, qara siyahıya əlavə edildiniz! \n\nSəbəb:** `{}`\n\n**Bundan sonra sizə xidmət etməyəcəyəm.**
 """
-    KULLANICI_BILGILENDIRME = """
-\n\n✅ İstifadəçini məlumatlandırdım.
+    KULLANICI_BILGILENDIRME = """\n\n✅ İstifadəçini məlumatlandırdım.
 """
-    KULLANICI_BILGILENDIRMEME = """
-\n\n❌ **İstifadəçini məlumatlandırarkən xəta yarandı:** \n\n`{}`
+    KULLANICI_BILGILENDIRMEME = """\n\n❌ **İstifadəçini məlumatlandırarkən xəta yarandı:**\n\n`{}`
 """
     UNBANNED_USER = """
-🆓 **İstifadəçinin qadağası qaldırıldı !** \nQadağanı qaldıran: {} \n**İstifadəçi ID:**{}
+🆓 **İstifadəçinin qadağası qaldırıldı!** \nQadağanı qaldıran: {}\n**İstifadəçi ID:**{}
 """
     USER_UNBAN_NOTIFY = """
 🎊 Sizə gözəl bir xəbərim var! Artıq əngəliniz qaldırıldı!
