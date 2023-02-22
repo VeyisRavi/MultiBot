@@ -63,7 +63,7 @@ def song(client, message):
         channel = results[0]["channel"]   
 
     except Exception as e:
-        m.edit("İstədiyiniz musiqi tapılmadı 😔")
+        m.edit("İstədiyiniz musiqi tapılmadı 😕")
         print(str(e))
         return
     m.edit(f"🎵**{title}**")
@@ -80,7 +80,7 @@ def song(client, message):
 **├───────────────**
 **├▷ 👤 İstəyən: {isteyen}**
 **├───────────────**
-**├▷ 🌀 Bot: @{Config.BOT_USERNAME}**
+**├▷ 🤖 Bot: @{Config.BOT_USERNAME}**
 **╰───────────────**
 '''
         caption_for_private = f'''
@@ -89,7 +89,7 @@ def song(client, message):
 **├───────────────**
 **├▷ 👁‍🗨 Baxış: {views}**
 **├───────────────**
-**├▷ 🌀 Bot: @{Config.BOT_USERNAME}**
+**├▷ 🤖 Bot: @{Config.BOT_USERNAME}**
 **╰───────────────**
 '''
 
