@@ -115,7 +115,7 @@ async def mentionall(event):
     if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı!\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
 
 
-@client.on(events.NewMessage(pattern="^.ttag ?(.*)"))
+@client.on(events.NewMessage(pattern="^.tektag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
@@ -139,7 +139,7 @@ async def mentionall(event):
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("**📌 Tağ Edə Bilməyim Üçün Səbəb Yazın!**")
   else:
-    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/ttag Salam`**")
+    return await event.respond("**❌ Tağ Etmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/tektag Salam`**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
