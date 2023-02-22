@@ -22,10 +22,10 @@ photolist = ["https://te.legra.ph/file/7c9892f18201efb39ff6a.mp4","https://te.le
 @app.on_message(filters.command("masın"))
 async def test_bot(bot: app, m: Message):
     start = time()
-    replymsg = await m.reply_text("**❤ Rondom Bir Maşın Şəkili Seçilir...**")
+    replymsg = await m.reply_text("**❤ Random bir maşın şəkili seçilir...**")
     end = round(time() - start, 2)
     photo = random.choice(photolist)
-    text = f"❤️ **{Config.BOT_USERNAME} Sizin Üçün Rondom Maşın Şəkili Seçdi**"
+    text = f"❤️ **{Config.BOT_USERNAME} sizin üçün random maşın şəkili seçdi**"
     await bot.send_photo(m.chat.id, photo=photo, caption=text)
     await replymsg.delete()
     
@@ -33,9 +33,9 @@ async def test_bot(bot: app, m: Message):
 @app.on_message(filters.command("masın2"))
 async def test_app(app: app, m: Message):
     start = time()
-    replymsg = await m.reply_text("**❤ Rondom Maşın Videosu Seçilir...**")
+    replymsg = await m.reply_text("**❤ Random maşın videosu seçilir...**")
     end = round(time() - start, 2)
     video = random.choice(photolist)
-    text = f"❤️ **{Config.BOT_USERNAME} Sizin Üçün Rondom Maşın Videosu Seçdi**"
+    text = f"❤️ **{Config.BOT_USERNAME} sizin üçün random maşın videosu seçdi**"
     await app.send_video(m.chat.id, video=video, caption=text)
     await replymsg.delete()    
