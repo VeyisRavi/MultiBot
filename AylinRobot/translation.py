@@ -91,7 +91,7 @@ class Translation(object):
 ║▻ 📃 Açıqlama: Bu əmr vasitəsilə bot sizə **Şəhid** adları göndərəcək
 ╚═════════════════
 ╔═════════════════
-║▻ 🥀 **Allah bütün Şəhidimizə rəhmət eləsin**
+║▻ 🥀 **Allah bütün Şəhidlərimizə rəhmət eləsin**
 ║▻ 🤲 Qazilərimizə şəfa versin 
 ║▻ 😔 Başın sağolsun Azərbaycan 🇦🇿
 ║▻ 🇦🇿 Bazada **2881** Şəhid adı mövcuddur
