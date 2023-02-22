@@ -593,7 +593,9 @@ Aylin = (
     "Sahibim burda olmasada qəlbi sizinlədir😌",
     "Burda yoxdur kömək üçün mənə deyə bilərsən😇",
     "@Rahid_7 səni çağırır qaqaş👀",
-    "🚷 Ban Olundun !\nSəbəb: Sahibimi tağ etdiyin üçün 🙄\n\nŞaka ya korkma 😂",
-    "/ban çox tağ edirsən sahibimi😕",
+    "**🚷 Ban Olundun !**\nSəbəb: Sahibimi tağ etdiyin üçün 🙄\n\nŞaka ya korkma 😂",
+    "/ban çox tağ edirsən Sahibimi🙄",
+    "/mute az tağ elə Sahibimi😑",
+    "/warn birdə Sahibimi tağ eləsən ban verəcəm sənə🤓",
     ""
 )
