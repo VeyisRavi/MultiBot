@@ -579,6 +579,6 @@ async def handler(event):
 
 Aylin = (
     "Az tağ elə sahibimi😒",
-    "Sahibim birazdan gələcək çox tağ eləmə😒"
+    "Sahibim birazdan gələcək çox tağ eləmə😒",
     "İşi var birazdan gələcək👀",
 )
