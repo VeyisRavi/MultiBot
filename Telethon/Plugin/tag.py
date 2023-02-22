@@ -581,6 +581,14 @@ Aylin = (
     "Az tağ elə sahibimi😒",
     "Nədi boy😂👀",
     "Haycan👀❤️",
-    "Rakos yox Rahid😒",
+    "İşi var birazdan gələcək😇",
+    "Ay bala nolub mənə de o yoxdu",
+    "Adə az tağ elədə sahibimi",
+    "Haycaaan👀",
+    "Sahibim burda deyil mənə deyə bilərsən👀",
+    "Evdə deyil",
+    "Adə nolub mənə de",
+    "Burda deyil yəqin başqa qrupdadı😂",
+    "Haycan balam🙈",
     ""
 )
