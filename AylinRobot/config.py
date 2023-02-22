@@ -15,7 +15,7 @@ class Config:
    API_HASH = os.getenv("API_HASH", "0bd538e224f28d8d8047d79f09a840ae")
    BOT_TOKEN = os.getenv("BOT_TOKEN", "5318930158:AAEzgLBqsu5UI9hCf_GLWB08N_Cz2dFKG9s")
    BOT_USERNAME = os.environ.get("BOT_USERNAME", "RahidRobot")
-   BOT_NAME = os.environ.get("BOT_NAME", "RahidRobot")
+   BOT_NAME = os.environ.get("BOT_NAME", "Rahid")
    OWNER_ID = int(os.environ.get("OWNER_ID", "571698989"))
    OWNER_NAME = os.environ.get("OWNER_NAME", "Rahid_7") 
    BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
