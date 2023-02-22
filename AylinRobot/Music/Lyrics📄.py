@@ -32,7 +32,7 @@ async def lyrics(_, message: Message):
     if S is None:
         return await m.edit("Mahnı sözləri tapılmadı: 🥹")
     xxx = f"""
-**🙋‍♀️ Yüklədi {Config.BOT_USERNAME}**
+**🤖 Yüklədi {Config.BOT_USERNAME}**
 **🎶 Axtarılan Mahnı:-** __{query}__
  **📖 Tapılmış Mahnı Sözləri:-** __{S.title}__
  **✍️ Rəssam:-** {S.artist}
