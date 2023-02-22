@@ -12,7 +12,7 @@ InlineKeyboardButton('📚 Kömək', callback_data='help'),
 ],[        
 InlineKeyboardButton('➕ Məni Qrupa Əlavə Et ➕', url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true"),
 ],[                
-InlineKeyboardButton('👨‍💻 Sahibim',  url=f"https://t.me/{Config.OWNER_NAME}"),
+InlineKeyboardButton('👨🏻‍💻 Bot Sahibi',  url=f"https://t.me/{Config.OWNER_NAME}"),
 InlineKeyboardButton('🎧 Playlist', url=f"https://t.me/{Config.PLAYLIST_NAME}"),]])
 
 #### KÖMƏK BUTTONU
@@ -30,7 +30,7 @@ InlineKeyboardButton('♾️ Əlavələr', callback_data='elave'),
 InlineKeyboardButton('🔍 Axtarış', callback_data='axtar'),
 InlineKeyboardButton('🛎 Tagger', callback_data='tag'),    
 ],[
-InlineKeyboardButton('👨‍💻 Sahib Əmrləri', callback_data='sahib'),
+InlineKeyboardButton('👨🏻‍💻 Sahib Əmrləri', callback_data='sahib'),
 ],[    
 InlineKeyboardButton('🔐 Bağla', callback_data='close'),   
 InlineKeyboardButton('↪️ Geri Qayıt', callback_data='home'),]])
