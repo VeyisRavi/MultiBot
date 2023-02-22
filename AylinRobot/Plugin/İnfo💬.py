@@ -52,7 +52,7 @@ async def info(client, message):
                 chat_member_p.joined_date or time.time()
             ).strftime("%Y.%m.%d %H:%M:%S")
             message_out_str += (
-                "<b>• Lastseen :</b> <code>"
+                "<b>• Qoşulma Tarixi:</b> <code>"
                 f"{joined_date}"
                 "</code>\n"
                 "▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
