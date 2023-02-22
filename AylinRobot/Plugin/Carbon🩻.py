@@ -33,8 +33,8 @@ async def carbon_func(client, msg):
     if reply:
         m = await msg.reply_text("️🌀 Carbonu hazırlayıram...")
         carbon = await make_carbon(msg.reply_to_message.text)
-        await m.edit("⚡ Artıq hazırdır! Göndərirəm.")
-        await client.send_document(msg.chat.id, carbon, caption=f"[Aylin](https://t.me/{Config.BOT_USERNAME}) tərəfindən {msg.from_user.mention} üçün yaradıldı. ✅")
+        await m.edit("⚡ Artıq hazırdır! Göndərirəm")
+        await client.send_document(msg.chat.id, carbon, caption=f"[Aylin](https://t.me/{Config.BOT_USERNAME}) tərəfindən {msg.from_user.mention} üçün yaradıldı ✅")
         await m.delete()
         carbon.close()
     else:
@@ -42,8 +42,8 @@ async def carbon_func(client, msg):
             text = msg.text.split(" ", 1)[1]
             m = await msg.reply_text("️🌀 Carbonu hazırlayıram...")
             carbon = await make_carbon(text)
-            await m.edit("⚡ Artıq hazırdır! Göndərirəm.")
-            await client.send_document(msg.chat.id, carbon, caption=f"[Rahid](https://t.me/{Config.BOT_USERNAME}) tərəfindən {msg.from_user.mention} üçün yaradıldı. ✅")
+            await m.edit("⚡ Artıq hazırdır! Göndərirəm")
+            await client.send_document(msg.chat.id, carbon, caption=f"[Rahid](https://t.me/{Config.BOT_USERNAME}) tərəfindən {msg.from_user.mention} üçün yaradıldı ✅")
             await m.delete()
             carbon.close()
         except IndexError:
