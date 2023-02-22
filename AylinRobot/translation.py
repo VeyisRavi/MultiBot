@@ -185,7 +185,7 @@ class Translation(object):
 ║▻ 🔮 İstifadə: /tag
 ║▻ 👥 Açıqlama: 5-li tağ edər.
 ║
-║▻ 🔮 İstifadə: /ttag
+║▻ 🔮 İstifadə: /tektag
 ║▻ 👤 Açıqlama: Təkli tağ edər.
 ║
 ║▻ 🔮 İstifadə: /stag
