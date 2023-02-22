@@ -41,7 +41,7 @@ async def broadcast_handler(m: Message):
         if not broadcast_ids.get(broadcast_id):
             break
     out = await m.reply_text(
-        text=f"Yayım Başladı!  Bütün istifadəçilər xəbərdar edildikdə log faylı ilə bildiriş alacaqsınız 😊\n\n🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})"
+        text=f"Yayım Başladı! Bütün istifadəçilər xəbərdar edildikdə log faylı ilə bildiriş alacaqsınız ⚡\n\n🙎🏻 [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})"
     )
     start_time = time.time()
     total_users = await db.total_users_count()
@@ -86,13 +86,13 @@ async def broadcast_handler(m: Message):
     await out.delete()
     if failed == 0:
         await m.reply_text(
-            text=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu 😊\n\n🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})",
+            text=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu ❌\n\n🙎🏻 [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})",
             quote=True
         )
     else:
         await m.reply_document(
             document='broadcast.txt',
-            caption=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu 😊\n\n🙎‍♀️ [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})",
+            caption=f"yayım `{completed_in}`-də tamamlandı\n\nCəmi istifadəçilər {total_users}.\nCəmi tamamlandı {done}, {success} uğur və {failed} uğursuz oldu ❌\n\n🙎🏻 [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})",
             quote=True
         )
     await aiofiles.os.remove('broadcast.txt')
