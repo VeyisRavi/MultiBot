@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 class Translation(object):
 
-    START_TEXT = """**🙋🏻 Salam {}**\nMənim Adım [{}](https://t.me/{})\n🇦🇿 Azərbaycan dilində çox özəllikli telegram botuyam bacarıqlarımı görmək üçün Kömək butonuna daxil olun\n\n👨🏻‍💻 **Bot Sahibi** @{}
+    START_TEXT = """**🙋🏻 Salam {}**\n👀 Mənim Adım [{}](https://t.me/{})\n🇦🇿 Azərbaycan dilində çox özəllikli telegram botuyam bacarıqlarımı görmək üçün Kömək butonuna daxil olun\n\n👨🏻‍💻 **Bot Sahibi** @{}
 
 """    
     HELP_TEXT = """**🙋🏻 Salam {}\n💁🏻 ️️️️️️ [{}](https://t.me/{})-un əmrləri bunlardır aşağıdakı butonlara daxil olaraq istədiyiniz əmrləri öyrənə bilərsiniz
