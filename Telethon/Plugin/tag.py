@@ -504,7 +504,7 @@ async def cancel(event):
 @client.on(events.NewMessage(pattern="^.admin ?(.*)"))
 async def tag_admin(event):
     chat = await event.get_input_chat()
-    text = "♕︎ Qrup Adminlərin Siyahısı ♕︎\n\n"
+    text = "♕︎ Qrup Adminlərin Siyahısı ♕︎\n"
     async for x in event.client.iter_participants(chat, 100, filter=ChannelParticipantsAdmins):
         text += f" \n[{x.first_name}](tg://user?id={x.id})"
     if event.reply_to_msg_id:
