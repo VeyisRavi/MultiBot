@@ -590,5 +590,6 @@ Aylin = (
     "Adə nolub mənə de",
     "Burda deyil yəqin başqa qrupdadı😂",
     "Haycan balam🙈",
+    "Sahibim burda olmasada qəlbi sizinlədir😌",
     ""
 )
