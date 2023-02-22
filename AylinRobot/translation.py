@@ -210,10 +210,8 @@ class Translation(object):
 class LAN(object):
 
 
-    BILDIRIM = """
-```**🆕 Yeni İstifadəçi bota start etdi**```\n\n👤: {}\n🆔 `{}`\n🔗 [{}](tg://user?id={})"""
-    GRUP_BILDIRIM = """
-```**🆕 Yeni İstifdəçi bota qrupda start etdi**```\n\n👤 Qrupa əlavə edən: `{}`\n🆔 Qrupa əlavə edən istifadəçi id: `{}`\n🔗 Profil linki: [{}](tg://user?id={})\nQrupun Adı: {}\nQrupun ID: {}\nQrupun mesaj linki (Sadəcə açıq qruplar): [Bura Toxun](https://t.me/c/{}/{})
+    BILDIRIM = """**🆕 Yeni İstifadəçi bota start etdi**\n\n👤: {}\n🆔 `{}`\n🔗 [{}](tg://user?id={})"""
+    GRUP_BILDIRIM = """**🆕 Yeni İstifdəçi bota qrupda start etdi**\n\n👤 Qrupa əlavə edən: `{}`\n🆔 Qrupa əlavə edən istifadəçi id: `{}`\n🔗 Profil linki: [{}](tg://user?id={})\nQrupun Adı: {}\nQrupun ID: {}\nQrupun mesaj linki (Sadəcə açıq qruplar): [Bura Toxun](https://t.me/c/{}/{})
 
 """
     SAHIBIME = """
