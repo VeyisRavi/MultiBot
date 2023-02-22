@@ -19,9 +19,9 @@ photolist = ["https://telegra.ph/file/1559957902ea74780464c.jpg","https://telegr
 @app.on_message(filters.command("pisik"))
 async def pisik(bot: app, m: Message):
     start = time()
-    replymsg = await m.reply_text("**❤ Rondom Bir Pişik Şəkili Seçilir...**")
+    replymsg = await m.reply_text("**❤ Random bir pişik şəkili seçilir...**")
     end = round(time() - start, 2)
     photo = random.choice(photolist)
-    text = f"❤️ **{Config.BOT_USERNAME} Sizin Üçün Rondom Bir Pişik Şəkili Seçdi**"
+    text = f"❤️ **{Config.BOT_USERNAME} sizin üçün random bir pişik şəkili seçdi**"
     await bot.send_photo(m.chat.id, photo=photo, caption=text)
     await replymsg.delete()
