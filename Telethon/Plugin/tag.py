@@ -553,7 +553,7 @@ async def handler(event):
 @client.on(events.ChatAction)
 async def handler(event):
     if event.user_left:
-        await event.reply("Əla birdə gəlmə")
+        await event.reply("Səni tanımaq çox xoş idi😔",)
 
 userjoin = (
 
@@ -562,7 +562,11 @@ userjoin = (
     "Salam xoş gəldin👀🙊",
     "Salam xoş gəlmisən @qruzdaa kanalımada abunə ol🙈",
     "Xoş gəldin balam😂❤️",
-    "",
+    "Xoş gəldin nəfəsss😂❤️",
+    "Xoş gəldin vətəndaş🤓",
+    "Xoş gəldin aramıza😌❤️",
+    "Salam xoş gəldin səni burda görmək çox xoşdur😍",
+    ""
 )
 
 
