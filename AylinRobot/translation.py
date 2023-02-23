@@ -68,7 +68,7 @@ class Translation(object):
 ║▻ 📃 Açıqlama: Musiqi yükləyər.
 ║
 ║▻ 🔮 İstifadə: /video
-║▻ 🧩  Nümunə: /video Rei - Ah Canım Sevgilim
+║▻ 🧩 Nümunə: /video Rei - Ah Canım Sevgilim
 ║▻ 📃 Açıqlama: Video yükləyər.
 ║
 ║▻ 🔮 İstifadə: /lyrics 
