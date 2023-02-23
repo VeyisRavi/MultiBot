@@ -15,192 +15,27 @@ class Translation(object):
 
 ### Bot Haqqında Ümumi Məlumat
 
-    BH_TEXT = """
-╔═════════════════
-║▻ **🙋🏻 Salam {} 
-║
-║▻ 🙎🏻 [{}](https://t.me/{}) 🇦🇿 Azərbaycan dilində çox özəllikli telegram botudur.**
-║
-║▻ 🌀 Bot Versiyası: v0.7.0
-║▻ 🍀 Pyrogram Versiyası: 1.4.16
-║▻ ⚡ Python Versiyası: 3.11.1
-║▻ ⚙️ Server: [Heroku](https://heroku.com)
-║▻ 📆 Botun istifadəyə verilmə tarixi: `13.03.2023` 
-╚═════════════════
-╔═════════════════
-║▻ **⚠️ Qeyd: Botun qrupunuzda işləməsi üçün admin əmrlərindən sadəcə (Mesaj Silmə) yetkisi verin**
-╚═════════════════
-"""
+    BH_TEXT = """**🙋🏻 Salam {}\n🙎🏻 [{}](https://t.me/{}) 🇦🇿 Azərbaycan dilində çox özəllikli telegram botudur**\n\n🌀 Bot Versiyası: v0.7.0\n🍀 Pyrogram Versiyası: 1.4.16\n⚡ Python Versiyası: 3.11.1\n⚙️Server: [Heroku](https://heroku.com)\n📆 Botun istifadəyə verilmə tarixi: `13.03.2023`\n\n**⚠️ Qeyd: Botun qrupunuzda işləməsi üçün admin əmrlərindən sadəcə (Mesaj Silmə) yetkisi verin**"""
 
 
-    SAHIB_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /stats
-║▻ 📃 Açıqlama: Bot haqqında ümumi məlumat verər.
-║
-║▻ 🔮 İstifadə: /block
-║▻ 📃 Açıqlama: İstifadəçini və ya qrupu bloklayar.
-║
-║▻ 🔮 İstifadə: /unblock
-║▻ 📃 Açıqlama: İstifadəçini və ya qrupun bloku açar.
-║
-║▻ 🔮 İstifadə: /blocklist
-║▻ 📃 Açıqlama: Blok olunanların siyahısını göstərər.
-║
-║▻ 🔮 İstifadə: /broadcastall
-║▻ 📃 Açıqlama: Qrupa və şəxsiyə yayım edər.
-║
-║▻ 🔮 İstifadə: /gcast
-║▻ 📃 Açıqlama: Qruplarda yayım edər.
-║
-║▻ 🔮 İstifadə: /broadcast_pin
-║▻ 📃 Açıqlama: Qruplarda yayım edər və sabitləyər.
-║
-║▻ 🔮 İstifadə: /dyno
-║▻ 📃 Açıqlama: Heroku dyno miqdarını ölçər.
-╚═════════════════
-"""
+    SAHIB_TEXT = """🔮 İstifadə: /stats\n📃 Açıqlama: Bot haqqında ümumi məlumat verər\n\n🔮 İstifadə: /block\n📃 Açıqlama: İstifadəçini və ya qrupu bloklayar\n\n🔮 İstifadə: /unblock\n📃 Açıqlama: İstifadəçini və ya qrupun bloku açar\n\n🔮 İstifadə: /blocklist\n📃 Açıqlama: Blok olunanların siyahısını göstərər\n\n🔮 İstifadə: /broadcastall\n📃 Açıqlama: Qrupa və şəxsiyə yayım edər\n\n🔮 İstifadə: /gcast\n📃 Açıqlama: Qruplarda yayım edər\n\n🔮 İstifadə: /broadcast_pin\n📃 Açıqlama: Qruplarda yayım edər və sabitləyər\n\n🔮 İstifadə: /dyno\n📃 Açıqlama: Heroku dyno miqdarını ölçər"""
 
-    MUSIC_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /song 
-║▻ 🧩 Nümunə: /song Rei - Ah Canım Sevgilim
-║▻ 📃 Açıqlama: Musiqi yükləyər.
-║
-║▻ 🔮 İstifadə: /video
-║▻ 🧩 Nümunə: /video Rei - Ah Canım Sevgilim
-║▻ 📃 Açıqlama: Video yükləyər.
-║
-║▻ 🔮 İstifadə: /lyrics 
-║▻ 🧩 Nümunə: /lyrics Rei - Ah Canım Sevgilim
-║
-║▻ 📃 Açıqlama: Musiqinin sözlərini tapar.
-╚═════════════════
-"""
+    MUSIC_TEXT = """🔮 İstifadə: /song\n🧩 Nümunə: /song Rei - Ah Canım Sevgilim\n📃 Açıqlama: Musiqi yükləyər\n\n🔮 İstifadə: /video\n🧩 Nümunə: /video Rei - Ah Canım Sevgilim\n📃 Açıqlama: Video yükləyər\n\n🔮 İstifadə: /lyrics\n🧩 Nümunə: /lyrics Rei - Ah Canım Sevgilim\n📃 Açıqlama: Musiqinin sözlərini tapar"""
 
-    TELEGRAPH_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /tgm
-║▻ 📃 Açıqlama: Şəkil, video və ya GIF göndərərək link ala bilərsiniz.
-╚═════════════════
-"""
+    TELEGRAPH_TEXT = """🔮 İstifadə: /tgm\n📃 Açıqlama: Şəkil, video və ya GIF göndərərək link ala bilərsiniz"""
 
-    SEHID_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /sehid 
-║▻ 📃 Açıqlama: Bu əmr vasitəsilə bot sizə **Şəhid** adları göndərəcək
-╚═════════════════
-╔═════════════════
-║▻ 🥀 **Allah bütün Şəhidlərimizə rəhmət eləsin**
-║▻ 🤲 Qazilərimizə şəfa versin 
-║▻ 😔 Başın sağolsun Azərbaycan 🇦🇿
-║▻ 🇦🇿 Bazada **2881** Şəhid adı mövcuddur
-╚═════════════════
-""" 
-    OYUN_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /zer
-║▻ 📃 Açıqlama: Zər atar
-║
-║▻ 🔮 İstifadə: /top
-║▻ 📃 Açıqlama: Top atar
-║
-║▻ 🔮 İstifadə: /bowling
-║▻ 📃 Açıqlama: Bowling atar
-║
-║▻ 🔮 İstifadə: /ox
-║▻ 📃 Açıqlama: Ox atar
-║
-║▻ 🔮 İstifadə: /jackpot
-║▻ 📃 Açıqlama: Jackpot atar
-║
-║▻ 🔮 İstifadə: /basket
-║▻ 📃 Açıqlama: Basket atar
-╚═════════════════
-"""
+    SEHID_TEXT = """🔮 İstifadə: /sehid\n📃 Açıqlama: Bu əmr vasitəsilə bot sizə **Şəhid** adları göndərəcək\n\n🥀 **Allah bütün Şəhidlərimizə rəhmət eləsin**\n🤲 Qazilərimizə şəfa versin\n😔 Başın sağolsun Azərbaycan 🇦🇿\n🇦🇿 Bazada **2881** Şəhid adı mövcuddur""" 
+    OYUN_TEXT = """🔮 İstifadə: /zer\n📃 Açıqlama: Zər atar\n\n🔮 İstifadə: /top\n📃 Açıqlama: Top atar\n\n🔮 İstifadə: /bowling\n📃 Açıqlama: Bowling atar\n\n🔮 İstifadə: /ox\n📃 Açıqlama: Ox atar\n\n🔮 İstifadə: /jackpot\n📃 Açıqlama: Jackpot atar\n\n🔮 İstifadə: /basket\n📃 Açıqlama: Basket atar"""
 
-    EYLENCE_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /soxri 
-║▻ 📃 Açıqlama: 16+ şəkillər atar.
-║
-║▻ 🔮 İstifadə: /pisik
-║▻ 📃 Açıqlama: Pişik şəkili atar.
-║
-║▻ 🔮 İstifadə: /anime
-║▻ 📃 Açıqlama: Anime şəkilər atar.
-║
-║▻ 🔮 İstifadə: /masin
-║▻ 📃 Açıqlama: Maşın şəkilər atar.
-║
-║▻ 🔮 İstifadə: /masin2
-║▻ 📃 Açıqlama: Maşın videolar atar.
-║
-║▻ 🔮 İstifadə: /tema
-║▻ 📃 Açıqlama: Telegram temalar atar.
-║
-║▻ 🔮 İstifadə: /pp
-║▻ 📃 Açıqlama: Profil şəkillər atar.
-║
-║▻ 🔮 İstifadə: /sevgi
-║▻ 📃 Açıqlama: Sevgi sözlər atar.
-║
-║▻ 🔮 İstifadə: /bio
-║▻ 📃 Açıqlama: Bio sözlər atar.
-╚═════════════════
-"""
+    EYLENCE_TEXT = """🔮 İstifadə: /soxri\n📃 Açıqlama: 16+ şəkillər atar\n\n🔮 İstifadə: /pisik\n📃 Açıqlama: Pişik şəkili atar\n\n🔮 İstifadə: /anime\n📃 Açıqlama: Anime şəkilər atar\n\n🔮 İstifadə: /masin\n📃 Açıqlama: Maşın şəkilər atar\n\n🔮 İstifadə: /masin2\n📃Açıqlama: Maşın videolar atar\n\n🔮 İstifadə: /tema\n📃 Açıqlama: Telegram temalar atar\n\n🔮 İstifadə: /pp\n📃 Açıqlama: Profil şəkillər atar\n\n🔮 İstifadə: /sevgi\n📃 Açıqlama: Sevgi sözlər atar\n\n🔮 İstifadə: /bio\n📃 Açıqlama: Bio sözlər atar"""
 
 
-    ELAVELER_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /carbon
-║▻ 📃 Açıqlama: Yazdığınız mesajı şəkilə çevirər.
-║
-║▻ 🔮 İstifadə: /id
-║▻ 📃 Açıqlama: İstifadəçi ID atar.
-║
-║▻ 🔮 İstifadə: /info
-║▻ 📃 Açıqlama: İstifadəçi haqqında məlumat atar.
-║
-║▻ 🔮 İstifadə: /alive
-║▻ 📃 Açıqlama: Botun işlək olduğunu yoxlayar.
-╚═════════════════
-"""
+    ELAVELER_TEXT = """🔮 İstifadə: /carbon\n📃 Açıqlama: Yazdığınız mesajı şəkilə çevirər\n\n🔮 İstifadə: /id\n📃 Açıqlama: İstifadəçi ID atar\n\n🔮 İstifadə: /info\n📃 Açıqlama: İstifadəçi haqqında məlumat atar\n\n🔮 İstifadə: /alive\n📃 Açıqlama: Botun işlək olduğunu yoxlayar\n\n🔮 İstifadə: /pin\n📃 Açıqlama: Mesajı sabitləyər\n\n🔮 İstifadə: /unpin\n📃 Açıqlama: Sabitləməni qaldırar"""
 
 
-    AXTARIS_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /github 
-║▻ 🧩 Nümunə: /github Rahid2003
-║▻ 📃 Açıqlama: Github axtarışı edər.
-║
-║▻ 🔮 İstifadə: /search
-║▻ 🧩 Nümunə: /search Rei - Ah Canım Sevgilim
-║▻ 📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz.
-╚═════════════════
-"""
+    AXTARIS_TEXT = """🔮 İstifadə: /github\n🧩 Nümunə: /github Rahid2003\n📃 Açıqlama: Github axtarışı edər\n\n🔮 İstifadə: /search\n🧩 Nümunə: /search Rei - Ah Canım Sevgilim\n📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz"""
 
-    TAGGER_TEXT = """
-╔═════════════════
-║▻ 🔮 İstifadə: /tag
-║▻ 👥 Açıqlama: 5-li tağ edər.
-║
-║▻ 🔮 İstifadə: /tektag
-║▻ 👤 Açıqlama: Təkli tağ edər.
-║
-║▻ 🔮 İstifadə: /stag
-║▻ 📜 Açıqlama: Maraqlı sözlərlə tağ edər.
-║
-║▻ 🔮 İstifadə: /etag
-║▻ 🥰 Açıqlama: Emoji ilə tağ edər.
-║
-║▻ 🔮 İstifadə: /btag
-║▻ 🏴 Açıqlama: Bayraqlarla tağ edər.
-║
-║▻ 🔮 İstifadə: /admin
-║▻ 👨‍⚖️ Açıqlama: Qrup adminlərin siyahısı atar.
-╚═════════════════
-"""
+    TAGGER_TEXT = """🔮 İstifadə: /tag\n👥 Açıqlama: 5-li tağ edər\n\n🔮 İstifadə: /tektag\n👤 Açıqlama: Təkli tağ edər\n\n🔮 İstifadə: /stag\n📜 Açıqlama: Maraqlı sözlərlə tağ edər\n\n🔮 İstifadə: /etag\n🥰 Açıqlama: Emoji ilə tağ edər\n\n🔮 İstifadə: /btag\n🏴 Açıqlama: Bayraqlarla tağ edər\n\n🔮 İstifadə: /admin\n👨‍⚖️ Açıqlama: Qrup adminlərin siyahısı atar"""
 
 
 
