@@ -65,10 +65,10 @@ aktiv deyil
 botu əngəlləyib
 """
     USER_ID_FALSE = """
-istifadəçi id'i yanlışdır.
+istifadəçi ID yanlışdır.
 """
     BROADCAST_STARTED = """
-```📤 BroadCast başladıldı! Bitəndə mesaj göndərəcəm.
+```📤 BroadCast başladı! Bitəndə mesaj göndərəcəm.
 """
     BROADCAST_STOPPED = """
 ✅ ```Broadcast uğurla tamamlandı.```\n\n**Bu qədər vaxtda tamamlandı** `{}`\n\n**Ümumi istifadəçilər:** `{}`\n\n**Ümumi göndərmə cəhdləri:** `{}`\n\n**Uğurla göndərilən:** `{}`\n\n**Ümumi xəta:** `{}`
@@ -77,7 +77,7 @@ istifadəçi id'i yanlışdır.
 {} **Zəhmət olmasa gözləyin, bilgiləri gətirirəm!**
 """
     STATS = """
-**@{} Məlumatları**\n\n**İstifadəçiləri;**\n» Ümumi Söhbətlər: `{}`\n» Ümumi Qruplar: `{}`\n» Ümumi PM's: `{}`\n\n**Disk İstifadəsi;**\n» Disk'in Sahəsi: `{}`\n» İstifadə Edilən: `{} ({}%)`\n» Boş Qalan: `{}`\n\n**🎛 Ən yüksək istifadə dəyərləri;**\n» CPU: `{}%`\n» RAM: `{}%`\n» Pyrogram: {}
+**@{} məlumatları**\n\n**İstifadəçiləri;**\n» Ümumi: `{}`\n» Ümumi Qruplar: `{}`\n» Ümumi PM: `{}`\n\n**Disk İstifadəsi;**\n» Disk'in Sahəsi: `{}`\n» İstifadə Edilən: `{} ({}%)`\n» Boş Qalan: `{}`\n\n**🎛 Ən yüksək istifadə dəyərləri;**\n» CPU: `{}%`\n» RAM: `{}%`\n» Pyrogram: {}
 """
     BAN_REASON = """
 Bu səbəbdən qadağan olundunuz @{} tərəfindən avtomatik olaraq yaradılmışdır."""
@@ -105,13 +105,13 @@ Bu səbəbdən qadağan olundunuz @{} tərəfindən avtomatik olaraq yaradılmı
     KULLANICI_BILGILENDIRMEME = """\n\n❌ **İstifadəçini məlumatlandırarkən xəta yarandı:**\n\n`{}`
 """
     UNBANNED_USER = """
-🆓 **İstifadəçinin qadağası qaldırıldı!** \nQadağanı qaldıran: {}\n**İstifadəçi ID:**{}
+🆓 **İstifadəçinin qadağası qaldırıldı!** \nQadağanı qaldıran: {}\n**İstifadəçi ID:** `{}`
 """
     USER_UNBAN_NOTIFY = """
 🎊 Sizə gözəl bir xəbərim var! Artıq əngəliniz qaldırıldı!
 """
     BLOCKS = """
-🆔 **İstifadəçi ID**: `{}`\n⏱ **Vaxt**: `{}`\n🗓 **Qadağan edildiyi tarix**: `{}`\n💬 **Səbəb**: `{}`\n\n"""
+🆔 **İstifadəçi ID:** `{}`\n⏱ **Vaxt:** `{}`\n🗓 **Qadağan edildiyi tarix:** `{}`\n💬 **Səbəb:** `{}`\n\n"""
     TOTAL_BLOCK = """
 🚷 **Ümumi əngəllənən:** `{}`\n\n{}
 """
