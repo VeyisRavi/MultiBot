@@ -33,9 +33,9 @@ async def lyrics(_, message: Message):
         return await m.edit("Mahnı sözləri tapılmadı: 🥹")
     xxx = f"""
 **🤖 Yüklədi {Config.BOT_USERNAME}**
-**🎶 Axtarılan Mahnı:-** __{query}__
- **📖 Tapılmış Mahnı Sözləri:-** __{S.title}__
- **✍️ Rəssam:-** {S.artist}
+**🎶 Axtarılan Mahnı:** __{query}__
+ **📖 Tapılmış Mahnı Sözləri:** __{S.title}__
+ **✍️ Rəssam:** {S.artist}
  **📄 __Mahnı sözləri:__**
 
 {S.lyrics}"""
@@ -46,7 +46,7 @@ async def lyrics(_, message: Message):
             out_file.write(str(xxx.strip()))
         await message.reply_document(
             document=filename,
-            caption=f"**Sözlər çox olduğundan fayl edib atdım...:**\n\n`Lyrics`",
+            caption=f"**Sözlər çox olduğundan fayl edib atdım...**\n\n`Lyrics`",
             quote=False,
         )
         os.remove(filename)
