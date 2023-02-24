@@ -10,12 +10,12 @@ class Translation(object):
     START_TEXT = """**🙋🏻 Salam {}**\n👀 Mənim Adım [{}](https://t.me/{})\n🇦🇿 Azərbaycan dilində çox özəllikli telegram botuyam bacarıqlarımı görmək üçün Kömək butonuna daxil olun\n\n👨🏻‍💻 **Sahibim** @{}
 
 """    
-    HELP_TEXT = """**🙋🏻 Salam {}\n💁🏻 [{}](https://t.me/{}) botun əmrləri bunlardır aşağıdakı butonlara daxil olaraq istədiyiniz əmrləri öyrənə bilərsiniz
+    HELP_TEXT = """**🙋🏻 Salam {}\n💁🏻 [{}](https://t.me/{}) əmrləri bunlardır aşağıdakı butonlara daxil olaraq istədiyiniz əmrləri öyrənə bilərsiniz
 """
 
 ### Bot Haqqında Ümumi Məlumat
 
-    BH_TEXT = """**🙋🏻 Salam {}\n🤖 [{}](https://t.me/{}) Bot Azərbaycan dilində çox özəllikli telegram botudur**\n\n🌀 Bot Versiyası: v0.7.0\n🍀 Pyrogram Versiyası: 1.4.16\n⚡ Python Versiyası: 3.11.1\n⚙️ Server: [Heroku](https://heroku.com)\n📆 Botun istifadəyə verilmə tarixi: `13.03.2023`\n\n**⚠️ Qeyd: Botun qrupunuzda işləməsi üçün admin əmrlərindən sadəcə (Mesaj Silmə) yetkisi verin**"""
+    BH_TEXT = """**🙋🏻 Salam {}\n🤖 [{}](https://t.me/{}) Azərbaycan dilində çox özəllikli telegram botudur**\n\n🌀 Bot Versiyası: v0.7.0\n🍀 Pyrogram Versiyası: 1.4.16\n⚡ Python Versiyası: 3.11.1\n⚙️ Server: [Heroku](https://heroku.com)\n📆 Botun istifadəyə verilmə tarixi: `13.03.2023`\n\n**⚠️ Qeyd: Botun qrupunuzda işləməsi üçün admin əmrlərindən sadəcə (Mesaj Silmə) yetkisi verin**"""
 
 
     SAHIB_TEXT = """🔮 İstifadə: `/stats`\n📃 Açıqlama: Bot haqqında ümumi məlumat verər\n\n🔮 İstifadə: `/block`\n📃 Açıqlama: İstifadəçini və ya qrupu bloklayar\n\n🔮 İstifadə: `/unblock`\n📃 Açıqlama: İstifadəçini və ya qrupun bloku açar\n\n🔮 İstifadə: `/blocklist`\n📃 Açıqlama: Blok olunanların siyahısını göstərər\n\n🔮 İstifadə: `/broadcastall`\n📃 Açıqlama: Qrupa və şəxsiyə yayım edər\n\n🔮 İstifadə: `/gcast`\n📃 Açıqlama: Qruplarda yayım edər\n\n🔮 İstifadə: `/broadcast_pin`\n📃 Açıqlama: Qruplarda yayım edər və sabitləyər\n\n🔮 İstifadə: `/dyno`\n📃 Açıqlama: Heroku dyno miqdarını ölçər"""
