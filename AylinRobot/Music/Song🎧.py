@@ -43,7 +43,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply(f"🔎 **Axtarılır...{query}**")
+    m = message.reply(f"🔍 **Axtarıram...{query}**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -97,12 +97,12 @@ def song(client, message):
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
             secmul *= 60
-        m.edit("📤 Yüklənir..")
+        m.edit("📤 **Göndərirəm...**")
         message.reply_audio(audio_file, caption=caption_for_private, quote=False, title=title, duration=dur, thumb=thumb_name, performer = f"{Config.PLAYLIST_NAME}", reply_markup=buttons['markup_for_private'])
         m.delete()
         app.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=caption_for_logchannel, performer = f"{Config.BOT_USERNAME}", title=title, duration=dur, thumb=thumb_name, reply_markup=buttons['add_to_group'])
     except Exception as e:
-        m.edit(f'**⚠️ Gözlənilməyən xəta yarandı.**\n**Xahiş edirəm xətanı @{Config.OWNER_NAME} sahibimə xəbərdar et!**')
+        m.edit(f'**⚠️ Gözlənilməyən xəta yarandı**\n**Xahiş edirəm xətanı @{Config.OWNER_NAME} sahibimə xəbərdar et!**')
         print(e)
 
     try:
