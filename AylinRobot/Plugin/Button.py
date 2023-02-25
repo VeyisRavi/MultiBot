@@ -28,7 +28,7 @@ InlineKeyboardButton('🌀 Əyləncə', callback_data='eylence'),
 InlineKeyboardButton('♾️ Əlavələr', callback_data='elave'),
 ],[
 InlineKeyboardButton('🔍 Axtarış', callback_data='axtar'),
-InlineKeyboardButton('🏷️ Tagger', callback_data='tag'),    
+InlineKeyboardButton('🔔 Tagger', callback_data='tag'),    
 ],[
 InlineKeyboardButton('👨🏻‍💻 Sahib Əmrləri', callback_data='sahib'),
 ],[    
