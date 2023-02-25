@@ -36,7 +36,7 @@ async def video(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply(f"🔎 **Axtarıram...**")
+        msg = await message.reply(f"🔍 **Axtarıram...**")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
