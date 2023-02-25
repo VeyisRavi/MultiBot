@@ -43,7 +43,7 @@ async def video(client, message):
     except Exception as e:
         return await msg.edit(f"🚫 **Xəta:** {e}")
     preview = wget.download(thumbnail)
-    await msg.edit("📤 **Göndərirəm...**")
+    await msg.edit("📥 **Göndərirəm...**")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
