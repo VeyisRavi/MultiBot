@@ -26,7 +26,7 @@ class Config:
    BAN_GROUP = int(os.environ.get("BAN_GROUP", "-1001864613336"))
    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "dbf30e04-cf9a-4e07-ac48-e4365a16362e")
    ALIVE_NAME = os.environ.get("ALIVE_NAME", "Rahid")
-   CHANNEL = os.environ.get("CHANNEL", "Rahid_44")
+   CHANNEL = os.environ.get("CHANNEL", "qruzdaa")
    SUPPORT = os.environ.get("SUPPORT", "Cenublar")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/33c593637f4766883abed.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://te.legra.ph/file/aef1bdf8ef30b6ced6bbc.jpg")
