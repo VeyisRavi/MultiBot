@@ -66,7 +66,7 @@ def song(client, message):
         m.edit("İstədiyiniz musiqi tapılmadı 😕")
         print(str(e))
         return
-    m.edit(f"🎵**{title}**")
+    m.edit(f"🎵 **{title}**")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
