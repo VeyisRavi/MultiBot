@@ -34,9 +34,9 @@ async def info(client, message):
     
     message_out_str = (
         "<b>İstifadəçinin Məlumatları</b>\n\n"
-        f"<b>👤 Adı: <a href='tg://user?id={from_user.id}'>{first_name}</a></b>\n"
+        f"<b>🏷️ Adı: <a href='tg://user?id={from_user.id}'>{first_name}</a></b>\n"
         f"<b>🆔 ID:</b> <code>{from_user.id}</code>\n"
-        f"<b>⚡ İstifadəçi Adı:</b> @{username}\n"
+        f"<b>👤 İstifadəçi Adı:</b> @{username}\n"
         f"<b>🔗 Link:</b> {from_user.mention}\n" if from_user.username else ""
         f"<b>Silindi:</b>Doğrudur\n" if from_user.is_deleted else ""
         f"<b>Doğrulanıb:</b>Doğrudur" if from_user.is_verified else ""
