@@ -522,22 +522,22 @@ SAHIB = Config.OWNER_ID
 async def pin(event):
     if event.sender_id == SAHIB:
         if not event.reply_to_msg_id:
-            return await event.reply("🗨 Zəhmət Olmasa Bir Mesaja Yanıt Verin")
-        await event.reply("📌 Sahibim Mesajınız Sabitləndi!")
+            return await event.reply("Zəhmət olmasa bir mesaja yanıt ver ❗")
+        await event.reply("Mesajı sabitlədım 📌")
         await event.client.pin_message(event.chat_id, event.reply_to_msg_id, notify=True)
     else:
-        await event.reply(f"Sən {Config.BOT_NAME} Bota Sahib Deyilsən!\n⛔ Sabitləməyə Çalışma.")
+        await event.reply(f"Sən {Config.BOT_NAME} bota sahib deyilsən ❗")
  
 
 @client.on(events.NewMessage(pattern="^.unpin ?(.*)"))
 async def unpin(event):
     if event.sender_id == SAHIB:
         if not event.reply_to_msg_id:
-            return await event.reply("🗨 Zəhmət Olmasa Sabitlənmiş Mesaja Yanıt Verin")
-        await event.reply("Sahibim Sabitlənmiş Mesaj Qaldırıldı")
+            return await event.reply("Zəhmət olmasa sabitlənmiş bir mesaja yanıt ver ❗")
+        await event.reply("Sabitlənmiş mesaj qaldırıldı ❗")
         await event.client.unpin_message(event.chat_id)
     else:
-        await event.reply(f"Sən {Config.BOT_NAME} Bota Sahib Deyilsən!\n⛔ Sabiti qaldırmağa Çalışma.")    
+        await event.reply(f"Sən {Config.BOT_NAME} bota sahib deyilsən ❗")    
         
 
 
@@ -553,7 +553,7 @@ async def handler(event):
 @client.on(events.ChatAction)
 async def handler(event):
     if event.user_left:
-        await event.reply("Səni tanımaq çox xoş idi😔",)
+        await event.reply("Səni tanımaq çox xoş idi",)
 
 userjoin = (
 
@@ -566,6 +566,10 @@ userjoin = (
     "Xoş gəldin vətəndaş🤓",
     "Xoş gəldin aramıza😌❤️",
     "Salam xoş gəldin səni burda görmək çox xoşdur😍",
+    "Salam xoş gəldin gözəl insan🥰",
+    "Salam xoş gəldin necəsən?🥰",
+    "Salamm xanım xoş gəldin tanış olmaq olar?👀😂",
+    "Bayaqdan səni gözləyirəme gəl çıxda😒",
     ""
 )
 
@@ -588,7 +592,7 @@ Aylin = (
     "Az tağ elədə sahibimi",
     "Sahibim burda deyil mənə deyə bilərsən👀",
     "Evdə deyil",
-    "Nolub mənə de",
+    "Nolub mənə deyə bilərsən",
     "Burda deyil yəqin başqa qrupdadı😂",
     "Sahibim burda olmasada qəlbi sizinlədir😌",
     "Burda yoxdur kömək üçün mənə deyə bilərsən😇",
@@ -596,6 +600,10 @@ Aylin = (
     "**🚷 Ban Olundun !**\nSəbəb: Sahibimi tağ etdiyin üçün 🙄\n\nŞaka ya korkma 😂",
     "/ban çox tağ edirsən Sahibimi🙄",
     "/mute az tağ elə Sahibimi😑",
-    "/warn birdə Sahibimi tağ eləsən ban verəcəm sənə🤓",
-    "/fban sahibimi çox tağ edirsən qaqaş🙄",
+    "/warn birdə Sahibimi tağ eləsən ban verəcəm sənə!",
+    "/fban Sahibimi çox tağ edirsiz!",
+    "Sahibim dedi birazdan gələcəm👀",
+    "Az tağ edin onu zəhmət olmasa🙄",
+    "Onun başı qarışıqdı birazdan gələcək",
+    ""
 )
