@@ -44,7 +44,7 @@ async def telegraph(client, message):
     except Exception as document:
         await message.reply(message, text=document)
     else:
-        await message.reply(f"**✅ Sizin üçün şəkil linki hazırdır:**\n\n`https://telegra.ph{response[0]}`\n\n🤖 Göndərdi [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})**", disable_web_page_preview=False)
+        await message.reply(f"**✅ Sizin üçün şəkil linki hazırdır**\n\n`https://telegra.ph{response[0]}`\n\n🤖 Göndərdi [{Config.BOT_NAME}](https://t.me/{Config.BOT_USERNAME})**", disable_web_page_preview=False)
     finally:
         os.remove(download_location)
     
