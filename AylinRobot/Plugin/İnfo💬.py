@@ -15,7 +15,7 @@ from AylinRobot.config import Config
 async def info(client, message):
     """ istifadəçi məlumatını çıxarın """
     status_message = await message.reply_text(
-        "🔎"
+        "**Məlumatlar gətirilir...** 🔍"
     )
     from_user = None
     from_user_id, _ = extract_user(message)
@@ -25,7 +25,7 @@ async def info(client, message):
         await status_message.edit(str(error))
         return
     if from_user is None:
-        await status_message.edit("Etibarlı İstifadəçi_ID / göstərilməyib🙄")
+        await status_message.edit("Etibarlı İstifadəçi_ID / göstərilməyib ❌")
         return
     
     first_name = from_user.first_name or ""
