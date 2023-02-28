@@ -191,7 +191,7 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**❌ Şəxsində Tağ Etmək Olmaz**\n**✅ Bu Əmr Sadəcə Qruplar Üçündür**")
+    return await event.respond("**❌ Şəxsidə Tağ Etmək Olmaz**\n**✅ Bu Əmr Sadəcə Qruplar Üçündür**")
   
   admins = []
   
