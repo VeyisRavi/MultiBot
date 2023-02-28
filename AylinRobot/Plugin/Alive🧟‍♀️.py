@@ -54,7 +54,7 @@ async def Alive(client: Client, message: Message):
             [
                 InlineKeyboardButton("📢 Kanal", url=f"https://t.me/{Config.CHANNEL}"),
                 InlineKeyboardButton(
-                    "🎧 Playlist Kanalı", url=f"https://t.me/{Config.PLAYLIST_NAME}"
+                    "🎧 Playlist", url=f"https://t.me/{Config.PLAYLIST_NAME}"
                 ),
             ]
         ]
