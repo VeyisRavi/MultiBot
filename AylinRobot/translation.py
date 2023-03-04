@@ -31,7 +31,7 @@ class Translation(object):
     ELAVELER_TEXT = """🔮 İstifadə: /carbon\n📃 Açıqlama: Yazdığınız mesajı şəkilə çevirər\n\n🔮 İstifadə: /id\n📃 Açıqlama: İstifadəçi ID atar\n\n🔮 İstifadə: /info\n📃 Açıqlama: İstifadəçi haqqında məlumat atar\n\n🔮 İstifadə: /alive\n📃 Açıqlama: Botun işlək olduğunu yoxlayar"""
 
 
-    AXTARIS_TEXT = """🔮 İstifadə: /github\n🧩 Nümunə: `/github Rahid2003`\n📃 Açıqlama: Github axtarışı edər\n\n🔮 İstifadə: /search\n🧩 Nümunə: `/search Tənha Adamlar`\n📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz"""
+    AXTARIS_TEXT = """🔮 İstifadə: /github\n🧩 Nümunə: `/github Rahid2003`\n📃 Açıqlama: Github axtarışı edər\n\n🔮 İstifadə: /search\n🧩 Nümunə: `/search Balaeli & Nefes - Gizli Esq`\n📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz"""
 
     TAGGER_TEXT = """🔮 İstifadə: /tag\n👥 Açıqlama: 5-li tağ edər\n\n🔮 İstifadə: /tektag\n👤 Açıqlama: Təkli tağ edər\n\n🔮 İstifadə: /stag\n📜 Açıqlama: Maraqlı sözlərlə tağ edər\n\n🔮 İstifadə: /etag\n🥰 Açıqlama: Emoji ilə tağ edər\n\n🔮 İstifadə: /btag\n🏴 Açıqlama: Bayraqlarla tağ edər\n\n🔮 İstifadə: /admin\n👨‍⚖️ Açıqlama: Qrup adminlərin siyahısı atar\n\n🔮 İstifadə: /cancel\n🛑 Açıqlama: Tağ prosesi dayandırar"""
 
