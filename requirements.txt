@@ -21,9 +21,8 @@ Pillow
 ujson
 psutil
 future
-dnspython
-yt_dlp
 youtube_search
+dnspython
 OpenCC
 pytube
 pillow
@@ -36,5 +35,5 @@ pymongo[srv]
 bs4
 Heroku3
 telegram
-yt-dlp
 telethon
+git+https://github.com/yt-dlp/yt-dlp
