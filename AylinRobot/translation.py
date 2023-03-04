@@ -18,7 +18,7 @@ class Translation(object):
 
     SAHIB_TEXT = """🔮 İstifadə: /stats\n📃 Açıqlama: Bot haqqında ümumi məlumat verər\n\n🔮 İstifadə: /block\n📃 Açıqlama: İstifadəçini və ya qrupu bloklayar\n\n🔮 İstifadə: /unblock\n📃 Açıqlama: İstifadəçini və ya qrupun bloku açar\n\n🔮 İstifadə: /blocklist\n📃 Açıqlama: Blok olunanların siyahısını göstərər\n\n🔮 İstifadə: /broadcastall\n📃 Açıqlama: Qrupa və şəxsiyə yayım edər\n\n🔮 İstifadə: /gcast\n📃 Açıqlama: Qruplarda yayım edər\n\n🔮 İstifadə: /broadcast_pin\n📃 Açıqlama: Qruplarda yayım edər və sabitləyər\n\n🔮 İstifadə: /dyno\n📃 Açıqlama: Heroku dyno miqdarını ölçər\n\n🔮 İstifadə: /pin\n📃 Açıqlama: Mesajı sabitləyər\n\n🔮 İstifadə: /unpin\n📃 Açıqlama: Sabitləməni qaldırar"""
 
-    MUSIC_TEXT = """🔮 İstifadə: /song\n🧩 Nümunə: `/song Tənha Adamlar`\n📃 Açıqlama: Musiqi yükləyər\n\n🔮 İstifadə: /video\n🧩 Nümunə: `/video Tənha Adamlar`\n📃 Açıqlama: Video yükləyər\n\n🔮 İstifadə: /lyrics\n🧩 Nümunə: `/lyrics Tənha Adamlar`\n📃 Açıqlama: Musiqinin sözlərini tapar"""
+    MUSIC_TEXT = """📀 İstifadə: /song\n➡️ Nümunə: `/song Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Musiqi yükləyər\n\n📀 İstifadə: /video\n➡️ Nümunə: `/video Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Video yükləyər\n\n📀 İstifadə: /lyrics\n➡️ Nümunə: `/lyrics Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Musiqinin sözlərini tapar"""
 
     TELEGRAPH_TEXT = """🔮 İstifadə: /tgm\n📃 Açıqlama: Şəkil, Video və ya GIF göndərərək link ala bilərsiniz"""
 
