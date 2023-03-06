@@ -16,22 +16,22 @@ class Translation(object):
     BH_TEXT = """**🙋🏻 Salam {}\n🤖 [{}](https://t.me/{}) Azərbaycan dilində çox özəllikli telegram botudur**\n\n🌀 Bot Versiyası: `v0.7.0`\n🍀 Pyrogram Versiyası: `1.4.16`\n⚡ Python Versiyası: `3.11.1`\n⚙️ Server: [Heroku](https://heroku.com)\n📆 Botun istifadəyə verilmə tarixi: `13.03.2023`\n\n**⚠️ Qeyd: Botun qrupunuzda işləməsi üçün admin əmrlərindən sadəcə (Mesaj Silmə) yetkisi verin**"""
 
 
-    SAHIB_TEXT = """🔮 İstifadə: /stats\n📃 Açıqlama: Bot haqqında ümumi məlumat verər\n\n🔮 İstifadə: /block\n📃 Açıqlama: İstifadəçini və ya qrupu bloklayar\n\n🔮 İstifadə: /unblock\n📃 Açıqlama: İstifadəçini və ya qrupun bloku açar\n\n🔮 İstifadə: /blocklist\n📃 Açıqlama: Blok olunanların siyahısını göstərər\n\n🔮 İstifadə: /broadcastall\n📃 Açıqlama: Qrupa və şəxsiyə yayım edər\n\n🔮 İstifadə: /gcast\n📃 Açıqlama: Qruplarda yayım edər\n\n🔮 İstifadə: /broadcast_pin\n📃 Açıqlama: Qruplarda yayım edər və sabitləyər\n\n🔮 İstifadə: /dyno\n📃 Açıqlama: Heroku dyno miqdarını ölçər\n\n🔮 İstifadə: /pin\n📃 Açıqlama: Mesajı sabitləyər\n\n🔮 İstifadə: /unpin\n📃 Açıqlama: Sabitləməni qaldırar"""
+    SAHIB_TEXT = """🔮 İstifadə: /stats\n💁 Açıqlama: Bot haqqında ümumi məlumat verər\n\n🔮 İstifadə: /block\n🚧 Açıqlama: İstifadəçini və ya qrupu bloklayar\n\n🔮 İstifadə: /unblock\n🗝️ Açıqlama: İstifadəçini və ya qrupun bloku açar\n\n🔮 İstifadə: /blocklist\n🗒️ Açıqlama: Blok olunanların siyahısını göstərər\n\n🔮 İstifadə: /broadcastall\n📢 Açıqlama: Qrupa və şəxsiyə yayım edər\n\n🔮 İstifadə: /gcast\n💬 Açıqlama: Qruplarda yayım edər\n\n🔮 İstifadə: /broadcast_pin\n🗣️ Açıqlama: Qruplarda yayım edər və sabitləyər\n\n🚀 İstifadə: /dyno\n🌐 Açıqlama: Heroku dyno miqdarını ölçər\n\n🔮 İstifadə: /pin\n📌 Açıqlama: Mesajı sabitləyər\n\n🔮 İstifadə: /unpin\n♦️ Açıqlama: Sabitləməni qaldırar"""
 
     MUSIC_TEXT = """📀 İstifadə: /song\n➡️ Nümunə: `/song Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Musiqi yükləyər\n\n📀 İstifadə: /video\n➡️ Nümunə: `/video Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Video yükləyər\n\n📀 İstifadə: /lyrics\n➡️ Nümunə: `/lyrics Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Musiqinin sözlərini tapar"""
 
-    TELEGRAPH_TEXT = """🔮 İstifadə: /tgm\n📃 Açıqlama: Şəkil, Video və ya GIF göndərərək link ala bilərsiniz"""
+    TELEGRAPH_TEXT = """🔮 İstifadə: /tgm\n🔗 Açıqlama: Şəkil, Video və ya GIF göndərərək link ala bilərsiniz"""
 
-    SEHID_TEXT = """🔮 İstifadə: /sehid\n📃 Açıqlama: Bu əmr vasitəsilə bot sizə **Şəhid** adları göndərəcək\n\n🥀 **Allah bütün Şəhidlərimizə rəhmət eləsin**\n🤲 Qazilərimizə şəfa versin\n😔 Başın sağolsun Azərbaycan 🇦🇿\n🇦🇿 Bazada **2881** Şəhid adı mövcuddur""" 
-    OYUN_TEXT = """🔮 İstifadə: /zer\n📃 Açıqlama: Zər atar\n\n🔮 İstifadə: /top\n📃 Açıqlama: Top atar\n\n🔮 İstifadə: /bowling\n📃 Açıqlama: Bowling atar\n\n🔮 İstifadə: /ox\n📃 Açıqlama: Ox atar\n\n🔮 İstifadə: /jackpot\n📃 Açıqlama: Jackpot atar\n\n🔮 İstifadə: /basket\n📃 Açıqlama: Basket atar"""
+    SEHID_TEXT = """🔮 İstifadə: /sehid\n🇦🇿 Açıqlama: Bu əmr vasitəsilə bot sizə **Şəhid** adları göndərəcək\n\n🥀 **Allah bütün Şəhidlərimizə rəhmət eləsin**\n🤲 Qazilərimizə şəfa versin\n😔 Başın sağolsun Azərbaycan 🇦🇿\n🇦🇿 Bazada **2881** Şəhid adı mövcuddur""" 
+    OYUN_TEXT = """🔮 İstifadə: /zer\n🎲 Açıqlama: Zər atar\n\n🔮 İstifadə: /top\n⚽ Açıqlama: Top atar\n\n🔮 İstifadə: /bowling\n🎳 Açıqlama: Bowling atar\n\n🔮 İstifadə: /ox\n🎯 Açıqlama: Ox atar\n\n🔮 İstifadə: /jackpot\n🕹️ Açıqlama: Jackpot atar\n\n🔮 İstifadə: /basket\n🏀 Açıqlama: Basket atar"""
 
-    EYLENCE_TEXT = """🔮 İstifadə: /soxri\n📃 Açıqlama: 16+ şəkillər atar\n\n🔮 İstifadə: /pisik\n📃 Açıqlama: Pişik şəkillər atar\n\n🔮 İstifadə: /anime\n📃 Açıqlama: Anime şəkillər atar\n\n🔮 İstifadə: /masin\n📃 Açıqlama: Maşın şəkillər atar\n\n🔮 İstifadə: /masin2\n📃Açıqlama: Maşın videolar atar\n\n🔮 İstifadə: /tema\n📃 Açıqlama: Telegram temalar atar\n\n🔮 İstifadə: /pp\n📃 Açıqlama: Profil şəkillər atar\n\n🔮 İstifadə: /sevgi\n📃 Açıqlama: Sevgi sözlər atar\n\n🔮 İstifadə: /bio\n📃 Açıqlama: Bio sözlər atar"""
-
-
-    ELAVELER_TEXT = """🔮 İstifadə: /carbon\n📃 Açıqlama: Yazdığınız mesajı şəkilə çevirər\n\n🔮 İstifadə: /id\n📃 Açıqlama: İstifadəçi ID atar\n\n🔮 İstifadə: /info\n📃 Açıqlama: İstifadəçi haqqında məlumat atar\n\n🔮 İstifadə: /alive\n📃 Açıqlama: Botun işlək olduğunu yoxlayar"""
+    EYLENCE_TEXT = """🔮 İstifadə: /soxri\n🖼️ Açıqlama: 16+ şəkillər atar\n\n🔮 İstifadə: /pisik\n🐈 Açıqlama: Pişik şəkillər atar\n\n🔮 İstifadə: /anime\n💢️ Açıqlama: Anime şəkillər atar\n\n🔮 İstifadə: /masin\n🚘 Açıqlama: Maşın şəkillər atar\n\n🔮 İstifadə: /masin2\n🚗 Açıqlama: Maşın videolar atar\n\n🔮 İstifadə: /tema\n🌈 Açıqlama: Telegram temalar atar\n\n🔮 İstifadə: /pp\n🦄 Açıqlama: Profil şəkillər atar\n\n🔮 İstifadə: /sevgi\n💞 ️Açıqlama: Sevgi sözlər atar\n\n🔮 İstifadə: /bio\n✍️ Açıqlama: Bio sözlər atar"""
 
 
-    AXTARIS_TEXT = """🔮 İstifadə: /github\n🧩 Nümunə: `/github Rahid2003`\n📃 Açıqlama: Github axtarışı edər\n\n🔮 İstifadə: /search\n🧩 Nümunə: `/search Balaeli & Nefes - Gizli Esq`\n📃 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz"""
+    ELAVELER_TEXT = """🔮 İstifadə: /carbon\n🖼️ Açıqlama: Yazdığınız mesajı şəkilə çevirər\n\n🔮 İstifadə: /id\n🆔 Açıqlama: İstifadəçi ID atar\n\n🔮 İstifadə: /info\nℹ️ Açıqlama: İstifadəçi haqqında məlumat atar\n\n🔮 İstifadə: /alive\n⚡ Açıqlama: Botun işlək olduğunu yoxlayar"""
+
+
+    AXTARIS_TEXT = """🔮 İstifadə: /github\n🧩 Nümunə: `/github Rahid2003`\n🕵️ Açıqlama: Github axtarışı edər\n\n🔮 İstifadə: /search\n🧩 Nümunə: `/search Balaeli & Nefes - Gizli Esq`\n🔍 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz"""
 
     TAGGER_TEXT = """🔮 İstifadə: /tag\n👥 Açıqlama: 5-li tağ edər\n\n🔮 İstifadə: /tektag\n👤 Açıqlama: Təkli tağ edər\n\n🔮 İstifadə: /stag\n📜 Açıqlama: Maraqlı sözlərlə tağ edər\n\n🔮 İstifadə: /etag\n🥰 Açıqlama: Emoji ilə tağ edər\n\n🔮 İstifadə: /btag\n🏴 Açıqlama: Bayraqlarla tağ edər\n\n🔮 İstifadə: /admin\n👨‍⚖️ Açıqlama: Qrup adminlərin siyahısı atar\n\n🔮 İstifadə: /cancel\n🛑 Açıqlama: Tağ prosesi dayandırar"""
 
@@ -66,16 +66,16 @@ botu əngəlləyib
 istifadəçi ID yanlışdır.
 """
     BROADCAST_STARTED = """
-```📤 BroadCast başladı! Bitəndə mesaj göndərəcəm.
+```📥 Reklam yayımı başladı!\nBitəndə mesaj göndərəcəm
 """
     BROADCAST_STOPPED = """
-✅ ```Broadcast uğurla tamamlandı.```\n\n**Bu qədər vaxtda tamamlandı** `{}`\n\n**Ümumi istifadəçilər:** `{}`\n\n**Ümumi göndərmə cəhdləri:** `{}`\n\n**Uğurla göndərilən:** `{}`\n\n**Ümumi xəta:** `{}`
+```✅ Reklam yayımı uğurla tamamlandı.```\n\n**Bu qədər vaxtda tamamlandı** `{}`\n\n**Ümumi istifadəçilər:** `{}`\n\n**Ümumi göndərmə cəhdləri:** `{}`\n\n**Uğurla göndərilən:** `{}`\n\n**Ümumi xəta:** `{}`
 """
     STATS_STARTED = """
 {} **Zəhmət olmasa gözləyin, bilgiləri gətirirəm!**
 """
     STATS = """
-**@{} məlumatları**\n\n**İstifadəçiləri;**\n» Ümumi: `{}`\n» Qruplar: `{}`\n» Şəxsi: `{}`\n\n**Disk İstifadəsi;**\n» Disk'in Sahəsi: `{}`\n» İstifadə Edilən: `{} ({}%)`\n» Boş Qalan: `{}`\n\n**🎛 Ən yüksək istifadə dəyərləri;**\n» CPU: `{}%`\n» RAM: `{}%`\n» Pyrogram: {}
+**@{} Məlumatları**\n\n**İstifadəçiləri;**\n» Ümumi: `{}`\n» Qruplar: `{}`\n» Şəxsi: `{}`\n\n**Disk İstifadəsi;**\n» Disk'in Sahəsi: `{}`\n» İstifadə Edilən: `{} ({}%)`\n» Boş Qalan: `{}`\n\n**🎛 Ən yüksək istifadə dəyərləri;**\n» CPU: `{}%`\n» RAM: `{}%`\n» Pyrogram: {}
 """
     BAN_REASON = """
 Bu səbəbdən qadağan olundunuz @{} tərəfindən avtomatik olaraq yaradılmışdır."""
