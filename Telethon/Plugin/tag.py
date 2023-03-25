@@ -34,7 +34,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -42,7 +42,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
 	
 	
@@ -52,13 +52,13 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**❌ PM Də Tağ Olmaz**\n**✅ Bu Əmr Sadəcə Qruplarda Və Kanallarda Keçərlidi!**")
+    return await event.respond("**⚠️ Bu əmr sadəcə qruplar üçün keçərlidir**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**⛔ Siz Admin Deyilsiz!**\n✅ **Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**⚠️ Bu əmr sadəcə adminlər üçün keçərlidir**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -67,22 +67,22 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**🔗 Keçmiş Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm❗**")
+        return await event.respond("**❌ Köhnə mesajlar üçün userlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**📌 Tağ Edə Bilməyim Üçün Mənə Mətin Ver**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**")
   else:
-    return await event.respond("**❌ Tağ Edmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/tag Salam`**")
+    return await event.respond("**⚠️ Tağ etmək üçün bir mesaj yazın**\n**ℹ️ Misal:** `/tag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**✅ Tağ Prosesi Başladıldı!**")
+    await event.respond(f"**✅ Tağ prosesi başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n• - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"\n[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -93,7 +93,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -103,7 +103,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n• - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"\n[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -114,14 +114,14 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -129,25 +129,25 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
 		
 		
 		
 		
 		
 		
-@client.on(events.NewMessage(pattern="^.ttag ?(.*)"))
+@client.on(events.NewMessage(pattern="^.tektag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("*❌ PM Də Tağ Olmaz**\n**✅ Bu Əmr Sadəcə Qruplarda Və Kanallarda Keçərlidi!**")
+    return await event.respond("**⚠️ Bu əmr sadəcə qruplar üçün keçərlidir**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("** ⛔ Siz Admin Deyilsiz!**\n✅** Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**⚠️ Bu əmr sadəcə adminlər üçün keçərlidir**")
  
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -156,22 +156,22 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("***🔗 Keçmiş Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm❗**")
+        return await event.respond("**❌ Köhnə mesajlar üçün üserlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**📌 Tağ Edə Bilməyim Üçün Mənə Mətin Ver!**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**")
   else:
-    return await event.respond("**❌ Tağ Edmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/ttag Salam`**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**\n**ℹ️ Misal:** `/tektag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**✅ Tağ Prosesi Uğurla Başladıldl.!**")
+    await event.respond(f"**✅ Tağ prosesi  başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n📢 - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"\n[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
@@ -182,7 +182,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}**")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -192,7 +192,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n📢 - [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"\n[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
@@ -203,7 +203,7 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
  
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
@@ -211,7 +211,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -219,7 +219,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  	
 	
 	
@@ -228,13 +228,13 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**❌ PM Də Tağ Olmaz**\n**✅ Bu Əmr Sadəcə Qruplarda Və Kanallarda Keçərlidi!**")
+    return await event.respond("**⚠️ Bu əmr sadəcə qruplar üçün keçərlidir**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**⛔ Siz Admin Deyilsiz!**\n✅ **Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**⚠️ Bu əmr sadəcə adminlər üçün keçərlidir**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -243,22 +243,22 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**🔗 Keçmiş Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm❗**")
+        return await event.respond("**❌ Köhnə mesajlar üçün userlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**📌 Tağ Edə Bilməyim Üçün Mənə Mətin Ver**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**")
   else:
-    return await event.respond("**❌ Tağ Edmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/htag Salam`**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**\n**ℹ️ Misal:** `/htag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**✅ Tağ Prosesi Başladıldı!**")
+    await event.respond(f"**✅ Tağ prosesi başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n•- [{random.choice(heyvan)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(heyvan)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -269,7 +269,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}**")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -279,7 +279,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n•- [{random.choice(heyvan)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(heyvan)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -290,14 +290,14 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -305,7 +305,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
 	
 	
@@ -314,13 +314,13 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("*❌ PM Də Tağ Olmaz**\n✅ Bu Əmr Sadəcə Qruplar Və Kanllar Üçün Keçərlidir.")
+    return await event.respond("**⚠️ Bu əmr sadəcə qruplar üçün keçərlidir**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("⛔ **Siz Admin Deyilsiz!**\n✅ **Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**⚠️ Bu əmr sadəcə adminlər üçün keçərlidir**")
  
   if event.pattern_match.group(0):
     mode = "text_on_cmd"
@@ -329,22 +329,22 @@ async def mentionall(event):
     mode = ""
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("ℹ **Köhnə Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm**")
+        return await event.respond("**❌ Köhnə meesajlar üçün userlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("Bana bir metin verin.")
   else:
-    return await event.respond("**Bir Mesajı Yanıtlayın Yada Tağ Edə Bilməyim Üçün Bir Səbəb Yazın\n✔ Misal Üçün:-`/etag Salam`**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**\n**ℹ️ Misal:** `/etag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond("**✅ Tağ Prosesi Başladıldı**")
+    await event.respond("**✅ Tağ prosesi başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n 🥀 [{random.choice(sehidler)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(sehidler)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -355,7 +355,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅  Tağ Prosesi Uğurla Tamamlandı**\n\n**📊 Tağ Edilınlərin Sayı:-**  `{rxyzdev_tagTot[event.chat_id]}`\n**👤 Prosesi Başladan:-** {rxyzdev_initT}")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:**  `{rxyzdev_tagTot[event.chat_id]}`\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -365,7 +365,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n 🥀 - [{random.choice(sehidler)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(sehidler)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -376,7 +376,7 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla tamamlandı**\n\n**⚡ Tağ Edildi:-**  `{rxyzdev_tagTot[event.chat_id]}`\n**🗣 Prosesi Başladan:-**  {rxyzdev_initT}")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:**  `{rxyzdev_tagTot[event.chat_id]}`\n**🗣 Prosesi başladan:**  {rxyzdev_initT}")
  
  
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
@@ -384,7 +384,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📋 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -392,7 +392,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📋 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
  
@@ -401,7 +401,7 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("*❌ PM Də Tağ Olmaz**\n✅ Bu Əmr Sadəcə Qruplar Və Kanllar Üçün Keçərlidir.")
+    return await event.respond("*⚠️ Bu əmr sadəcə qruplar üçün keçərlidir")
   
   admins = []
   
@@ -409,7 +409,7 @@ async def mentionall(event):
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("⛔ **Siz Admin Deyilsiz!**\n✅ **Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**⚠️ Bu əmr sadəcə adminlər üçün keçərlidir**")
  
   if event.pattern_match.group(0):
     mode = "text_on_cmd"
@@ -418,22 +418,22 @@ async def mentionall(event):
     mode = ""
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("ℹ **Köhnə Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm**")
+        return await event.respond("**❌ Köhnə mesajlar üçün userlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("Bana bir metin verin.")
   else:
-    return await event.respond("**Bir Mesajı Yanıtlayın Yada Tağ Edə Bilməyim Üçün Bir Səbəb Yazın\n✔ Misal Üçün:-`/etag Salam`**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**\n**ℹ️ Misal:** `/etag Salam`**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond("**✅ Tağ Prosesi Başladıldı**")
+    await event.respond("**✅ Tağ prosesi başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n• - [{random.choice(soz)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
@@ -444,7 +444,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅  Tağ Prosesi Uğurla Tamamlandı**\n\n**📊 Tağ Edilınlərin Sayı:-**  `{rxyzdev_tagTot[event.chat_id]}`\n**👤 Prosesi Başladan:-** {rxyzdev_initT}")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:**  `{rxyzdev_tagTot[event.chat_id]}`\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -454,7 +454,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n• - [{random.choice(soz)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 1:
@@ -465,7 +465,7 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla tamamlandı**\n\n**⚡ Tağ Edildi:-**  `{rxyzdev_tagTot[event.chat_id]}`\n**🗣 Prosesi Başladan:-**  {rxyzdev_initT}")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı**  `{rxyzdev_tagTot[event.chat_id]}`\n**🗣 Prosesi başladan:**  {rxyzdev_initT}")
  
  
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
@@ -473,7 +473,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📋 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -481,7 +481,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📋 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
  
@@ -490,13 +490,13 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**❌ PM Də Tağ Olmaz**\n**✅ Bu Əmr Sadəcə Qruplarda Və Kanallarda Keçərlidi!**")
+    return await event.respond("**⚠️ Bu əmr sadəcə qruplar üçün keçərlidir**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**⛔ Siz Admin Deyilsiz!**\n✅ **Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**⚠️ Bu əmr sadəcə adminlər üçün keçərlidir**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -505,22 +505,22 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**🔗 Keçmiş Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm❗**")
+        return await event.respond("**❌ Köhnə mesajlar üçün userlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**📌 Tağ Edə Bilməyim Üçün Mənə Mətin Ver**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün mesaj yazın**")
   else:
-    return await event.respond("**❌ Tağ Edmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/mtag Salam`**")
+    return await event.respond("**✅ Tağ edə bilməyim üçün bir mesaj yaın**\n**ℹ️ Misal:** `/mtag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**✅ Tağ Prosesi Başladıldı!**")
+    await event.respond(f"**✅ Tağ prosesi başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n•- [{random.choice(mafia)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(mafia)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -531,7 +531,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin dayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}**")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -541,7 +541,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n•- [{random.choice(mafia)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(mafia)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -552,14 +552,14 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -567,7 +567,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
  
@@ -579,13 +579,13 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**❌ PM Də Tağ Olmaz**\n**✅ Bu Əmr Sadəcə Qruplarda Və Kanallarda Keçərlidi!**")
+    return await event.respond("**⚠️ Bu əmr sadəcə qruplar üçün keçərlidir**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**⛔ Siz Admin Deyilsiz!**\n✅ **Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**⚠️ Bu əmr sadəcə adminlər üçün keçərlidir**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -594,22 +594,22 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**🔗 Keçmiş Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm❗**")
+        return await event.respond("**❌ Köhnə mesajlar üçün userlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**📌 Tağ Edə Bilməyim Üçün Mənə Mətin Ver**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**")
   else:
-    return await event.respond("**❌ Tağ Edmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/etag Salam`**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**\n**ℹ️ Misal:** `/etag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**✅ Tağ Prosesi Başladıldı!**")
+    await event.respond(f"**✅ Tağ prosesi başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"- [{random.choice(emoji)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -620,7 +620,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -630,7 +630,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f" - [{random.choice(emoji)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -641,14 +641,14 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -656,7 +656,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
  
@@ -665,13 +665,13 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**❌ PM Də Tağ Olmaz**\n**✅ Bu Əmr Sadəcə Qruplarda Və Kanallarda Keçərlidi!**")
+    return await event.respond("**✅ Bu əmr sadəcə qruplar üçün keçərlidir**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**⛔ Siz Admin Deyilsiz!**\n✅ **Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**✅ Bu əmr sadəcə adminlər üçün keçərlidir**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -680,22 +680,22 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**🔗 Keçmiş Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm❗**")
+        return await event.respond("**❌ Köhnə mesajlar üçün userlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**📌 Tağ Edə Bilməyim Üçün Mənə Mətin Ver**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**")
   else:
-    return await event.respond("**❌ Tağ Edmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/rtag Salam`**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın\n**ℹ️ Misal:** `/rtag Salam`**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**✅ Tağ Prosesi Başladıldı!**")
+    await event.respond(f"**✅ Tağ prosesi başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n•- [{random.choice(seher)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(seher)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -706,7 +706,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -716,7 +716,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"\n•- [{random.choice(seher)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(seher)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -727,14 +727,14 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -742,7 +742,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
  
@@ -751,13 +751,13 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**❌ PM Də Tağ Olmaz**\n**✅ Bu Əmr Sadəcə Qruplarda Və Kanallarda Keçərlidi!**")
+    return await event.respond("**⚠️ Bu əmr sadəcə qruplar üçün keçərlidir**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**⛔ Siz Admin Deyilsiz!**\n✅ **Bu Əmir Sadəcə Adminlər Üçün Keçərlidi**")
+    return await event.respond("**⛔ Siz admin deyilsiz**\n**⚠️ Bu əmr sadəcə adminlər üçün keçərlidir**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -766,22 +766,22 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**🔗 Keçmiş Mesajlar Üçün Userlərdən Bəhs Edə Bilmərəm❗**")
+        return await event.respond("**❌ Köhnə mesajlar üçün userlərdən bəhs edə bilmərəm**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**📌 Tağ Edə Bilməyim Üçün Mənə Mətin Ver**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**")
   else:
-    return await event.respond("**❌ Tağ Edmək Üçün Bir Səbəb Yoxdur\n✅ Tağ Edə Bilməyim Üçün Səbəb Yazın\nℹ `/btag Salam`**")
+    return await event.respond("**⚠️ Tağ edə bilməyim üçün bir mesaj yazın**\n**ℹ️ Misal:** `/btag Salam`")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**✅ Tağ Prosesi Başladıldı!**")
+    await event.respond(f"**✅ Tağ prosesi başladı**")
         
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"- [{random.choice(bayrag)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(bayrag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -792,7 +792,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -802,7 +802,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id, aggressive=False):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f" - [{random.choice(bayrag)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(bayrag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         return
       if usrnum == 5:
@@ -813,14 +813,14 @@ async def mentionall(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ Prosesi Uğurla Tamamlandı !.\n\n📊 Tağ Edilənlərin Sayı: {rxyzdev_tagTot[event.chat_id]}\n\n👤 Prosesi Başladan: {rxyzdev_initT}**")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** {rxyzdev_tagTot[event.chat_id]}\n\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
 @client.on(events.NewMessage(pattern='^.cancel ?(.*)'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
  
  
 @client.on(events.NewMessage(pattern='^.dayan ?(.*)'))
@@ -828,7 +828,7 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"✅**Tağ Prosesi Dayandırıldı.**\n\n📊 **Tağ Edilənərin Sayı:** `{rxyzdev_tagTot[event.chat_id]}`**")
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**❕ Tağ prosesi dayandırıldı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`")
 		
 
 
