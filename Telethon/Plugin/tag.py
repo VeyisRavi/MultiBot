@@ -355,7 +355,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:**  `{rxyzdev_tagTot[event.chat_id]}`\n**👤 Prosesi başladan:** {rxyzdev_initT}")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
@@ -444,7 +444,7 @@ async def mentionall(event):
         
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:**  `{rxyzdev_tagTot[event.chat_id]}`\n**👤 Prosesi başladan:** {rxyzdev_initT}")
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tağ prosesi tamamlandı**\n\n**📊 Tağ edilənlərin sayı:** `{rxyzdev_tagTot[event.chat_id]}`\n**👤 Prosesi başladan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
