@@ -914,5 +914,6 @@ async def handler(event):
 
 
 Aylin = (
-"O daha qrupa gəlməyəcək onu mən əvəz edəcəyəm 🤖"
+    "O daha qrupa gəlməyəcək onu mən əvəz edəcəyəm 🤖",
+    ""
 )
