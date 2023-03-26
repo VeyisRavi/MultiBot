@@ -914,6 +914,26 @@ async def handler(event):
 
 
 Aylin = (
+    "Az tağ elə sahibimi😒",
+    "İşi var birazdan gələcək😇",
+    "Ay bala nolub mənə de o yoxdu",
+    "Az tağ elədə sahibimi",
+    "Sahibim burda deyil mənə deyə bilərsən👀",
+    "Evdə deyil",
+    "Nolub mənə deyə bilərsən",
+    "Burda deyil yəqin başqa qrupdadı😂",
+    "Sahibim burda olmasada qəlbi sizinlədir😌",
+    "Burda yoxdur kömək üçün mənə deyə bilərsən😇",
+    "@Rahid_7 səni çağırır qaqaş👀",
+    "🚷 Ban Olundun !\nSəbəb: Sahibimi tağ etdiyin üçün 🙄\n\nŞaka ya korkma 😂",
+    "/ban çox tağ edirsən Sahibimi🙄",
+    "/mute az tağ elə Sahibimi😑",
+    "/warn birdə Sahibimi tağ eləsən ban verəcəm sənə!",
+    "/fban Sahibimi çox tağ edirsiz!",
+    "Sahibim dedi birazdan gələcəm👀",
+    "Az tağ edin onu zəhmət olmasa🙄",
+    "Onun başı qarışıqdı birazdan gələcək",
     "O daha qrupa gəlməyəcək onu mən əvəz edəcəyəm 🤖",
+    "Nə istəyirsən ondan?",
     ""
 )
