@@ -937,3 +937,7 @@ Aylin = (
     "Nə istəyirsən ondan?",
     ""
 )
+
+@Nermin.on(events.NewMessage(pattern='(?i)mal.+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.delete()
