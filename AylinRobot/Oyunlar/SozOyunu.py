@@ -208,37 +208,3 @@ async def buldu(c:Client, m:Message):
 gonderilmedi = True
 data_message = None
 EKLENEN_CHATS = []
-@app.on_message()
-async def data(c:Client, m:Message):
-    global EKLENEN_CHATS
-    global gonderilmedi
-    global data_message
-    
-    chat_id = str(m.chat.id)
-    
-    if chat_id in EKLENEN_CHATS:
-        return
-
-    if gonderilmedi:
-        data_message= await c.send_message(OWNER_ID, f"{OWNER_ID}")
-        gonderilmedi = False
-        
-    
-    else:
-        chats = await c.get_messages(OWNER_ID, data_message.message_id)
-        chats = chats.text.split()
-        
-        if chat_id in chats:
-            pass
-        else:
-            chats.append(chat_id)
-            EKLENEN_CHATS.append(chat_id)
-            data_text = ""
-            for i in chats:
-                data_text += i + " "
-            await c.edit_message_text(OWNER_ID, data_message.message_id, data_text)
-            
-            
-        
-
-
