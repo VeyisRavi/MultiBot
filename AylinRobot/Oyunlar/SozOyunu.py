@@ -13,9 +13,9 @@ from helpers.keyboards import *
 from helpers.kelimeler import kelime_sec
 from AylinRobot.Oyunlar import oyun, rating
 from pyrogram import Client, filters
-
+from helpers.filters import command
 # Oyunu başlat. 
-@app.on_message(filters.command("game") & ~filters.group)
+@app.on_message(command("game") & ~filters.group)
 async def kelimeoyun(c:Client, m:Message):
     global oyun
     aktif = False
@@ -57,7 +57,7 @@ async def kelimeoyun(c:Client, m:Message):
 
 
 
-@app.on_message(filters.command("kec") & ~filters.group)
+@app.on_message(command("kec") & ~filters.group)
 async def passs(c:Client, m:Message):
     global oyun
     
@@ -103,7 +103,7 @@ async def passs(c:Client, m:Message):
         
 
 
-@app.on_message(filters.command("skor"))
+@app.on_message(command("skor"))
 async def ratingsa(c:Client, m:Message):
     global rating
     metin = """📝 Küresel Grup Derecelendirmesi :
@@ -126,13 +126,13 @@ async def ratingsa(c:Client, m:Message):
         
       
 
-@app.on_message(filters.command("data") & filters.user("HuseynH")) 
+@app.on_message(command("data") & filters.user("HuseynH")) 
 async def data(c:Client, m):
     await m.reply(oyun)
     await m.reply(rating)
         
       
-@app.on_message(filters.command("stop") & ~filters.group)
+@app.on_message(command("stop") & ~filters.group)
 async def stop(c:Client, m:Message):
     global oyun
     
