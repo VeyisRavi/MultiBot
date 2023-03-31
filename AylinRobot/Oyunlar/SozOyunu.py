@@ -11,7 +11,7 @@ from random import shuffle
 from pyrogram.types import Message
 from helpers.keyboards import *
 from helpers.kelimeler import kelime_sec
-from FidanRobot.Oyun import oyun, rating
+from AylinRobot.Oyunlar import oyun, rating
 from pyrogram import Client, filters
 from helpers.filters import command
 
