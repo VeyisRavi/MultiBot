@@ -937,3 +937,8 @@ Aylin = (
     "Nə istəyirsən ondan?",
     ""
 )
+
+@client.on(events.NewMessage(pattern='(?i)göt.+'))
+@client.on(events.NewMessage(pattern='(?i)töt.+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.delete()
