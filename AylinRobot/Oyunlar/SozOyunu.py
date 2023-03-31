@@ -209,7 +209,7 @@ async def buldu(c:Client, m:Message):
 gonderilmedi = True
 data_message = None
 EKLENEN_CHATS = []
-@Client.on_message()
+@app.on_message()
 async def data(c:Client, m:Message):
     global EKLENEN_CHATS
     global gonderilmedi
