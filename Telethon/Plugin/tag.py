@@ -938,3 +938,10 @@ Aylin = (
     ""
 )
 
+
+@client.on(events.NewMessage(pattern='(?i)necəsən+'))
+@client.on(events.NewMessage(pattern='(?i)necesen+'))
+@client.on(events.NewMessage(pattern='(?i)nətərsən+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.delete()  
+    await event.reply(f"Mesajı Ssss Sildim")
