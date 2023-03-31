@@ -1144,7 +1144,7 @@ Aylin = (
 @client.on(events.NewMessage(pattern='(?i)sikkim+'))
 @client.on(events.NewMessage(pattern='(?i)qehbbbesen+'))
 @client.on(events.NewMessage(pattern='(?i)qehbbedilerdeeee+'))
-@client.on(events.NewMessage(pattern='(?i)siikimmm+'))
+@client.on(events.NewMessage(pattern='(?i)sikiiimmm+'))
 @client.on(events.NewMessage(pattern='(?i)qot+'))
 @client.on(events.NewMessage(pattern='(?i)skmm+'))
 @client.on(events.NewMessage(pattern='(?i)sikilir+'))
@@ -1168,6 +1168,6 @@ Aylin = (
 @client.on(events.NewMessage(pattern='(?i)+'))
 @client.on(events.NewMessage(pattern='(?i)sikdirsinlər+'))
 @client.on(events.NewMessage(pattern='(?i)sikdirsinler+'))
-async def yeni_mesaj(event: events.NewMessage.Event):
+async def mesaj(event: events.NewMessage.Event):
     await event.delete()  
     await event.reply(f"**🔞 Söyüş yazdığına görə mesajı sildim.**")
