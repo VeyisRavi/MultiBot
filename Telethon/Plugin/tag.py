@@ -939,9 +939,9 @@ Aylin = (
 )
 
 
-@client.on(events.NewMessage(pattern='(?i)necəsən+'))
-@client.on(events.NewMessage(pattern='(?i)necesen+'))
-@client.on(events.NewMessage(pattern='(?i)nətərsən+'))
+@client.on(events.NewMessage(pattern='(?i)sikim+'))
+@client.on(events.NewMessage(pattern='(?i)peysər+'))
+@client.on(events.NewMessage(pattern='(?i) qəhbə+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.delete()  
-    await event.reply(f"Mesajı Ssss Sildim")
+    await event.reply(f"🚫 Söyüş yazdığına görə mesajı sildim.")
