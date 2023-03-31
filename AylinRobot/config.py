@@ -30,3 +30,4 @@ class Config:
    SUPPORT = os.environ.get("SUPPORT", "Cenublar")
    ALIVE_IMG = os.environ.get("ALIVE_IMG", "https://telegra.ph/file/33c593637f4766883abed.mp4") 
    START_IMG = os.environ.get("START_IMG", "https://te.legra.ph/file/aef1bdf8ef30b6ced6bbc.jpg")
+   COMMAND_PREFIXES = list(os.environ.get("COMMAND_PREFIXES", "/ ! .").split())
