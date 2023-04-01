@@ -22,9 +22,9 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**Oyun hələ də davam edir ❕\n🔻 Oyunu dayandırmaq üçün /dayan yazın")
+        await m.reply("**❕ Oyun hələ də davam edir**\n**🔻 Oyunu dayandırmaq üçün /dayan yazın**")
     else:
-        await m.reply(f"**{m.from_user.mention}** tərəfindən oyun başladı 🎉",reply_markup=kanal) 
+        await m.reply(f"{m.from_user.mention} **tərəfindən oyun başladı 🎉**",reply_markup=kanal) 
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
@@ -40,13 +40,13 @@ async def kelimeoyun(c:Client, m:Message):
             kelime_list+= harf + " "
         
         text = f"""
-🎯 ʀᴀᴜɴᴅ: {oyun[m.chat.id]['round']}/20 
-ℹ️ ᴛᴀᴘɪʟᴀᴄᴀǫ sᴏ̈ᴢ: <code>{kelime_list}</code>
-💰 ᴠᴇʀɪʟᴇᴄᴇᴋ xᴀʟ: (1)
-💡 ɪʟᴋ ʜəʀғ: {oyun[m.chat.id]["kelime"][0]}
-📐 ᴜᴢᴜɴʟᴜǫ: {int(len(kelime_list)/2)} 
+**🎯 Raund:** {oyun[m.chat.id]['round']}/20 
+**ℹ️ Tapılacaq söz:** <code>{kelime_list}</code>
+**💰 Veriləcək xal:** (1)
+**💡 İlk hərf:** {oyun[m.chat.id]["kelime"][0]}
+**📐 Uzunluq:** {int(len(kelime_list)/2)} 
 
-🔍 ǫᴀʀɪşɪǫ sᴏ̈ᴢʟəʀɪ ᴛᴀᴘ"""
+**🔍 Qarışıq sözləri tap**"""
         await c.send_message(m.chat.id, text)
         
         
@@ -72,7 +72,7 @@ async def passs(c:Client, m:Message):
     if aktif:
         if oyun[m.chat.id]["kec"] < 3:
             oyun[m.chat.id]["kec"] += 1 
-            await c.send_message(m.chat.id,f"❕ Maksimum 3 keçmə haqqınız var\n➡️ Söz keçid edildi\n✅ Düzgün Söz: **<code>{oyun[m.chat.id]['kelime']}</code>**")
+            await c.send_message(m.chat.id,f"**❕ Maksimum 3 keçmə haqqınız var**\n**➡️ Söz keçid edildi**\n**✅ Düzgün söz:** <code>{oyun[m.chat.id]['kelime']}</code>")
             
             oyun[m.chat.id]["kelime"] = kelime_sec()
             oyun[m.chat.id]["aktif"] = True
@@ -85,19 +85,19 @@ async def passs(c:Client, m:Message):
                 kelime_list+= harf + " "
             
             text = f"""
-🎯 ʀᴀᴜɴᴅ: {oyun[m.chat.id]['round']}/20 
-ℹ️ ᴛᴀᴘɪʟᴀᴄᴀǫ sᴏ̈ᴢ: <code>{kelime_list}</code>
-💰 ᴠᴇʀɪʟᴇᴄᴇᴋ xᴀʟ: (1)
-💡 ɪʟᴋ ʜəʀғ: {oyun[m.chat.id]["kelime"][0]}
-📐 ᴜᴢᴜɴʟᴜǫ: {int(len(kelime_list)/2)} 
+**🎯 Raund:** {oyun[m.chat.id]['round']}/20 
+**ℹ️ Tapılacaq söz:** <code>{kelime_list}</code>
+**💰 Veriləcək xal:** (1)
+**💡 İlk hərf:** {oyun[m.chat.id]["kelime"][0]}
+**📐 Uzunluq:** {int(len(kelime_list)/2)} 
 
-🔍 ǫᴀʀɪşɪǫ sᴏ̈ᴢʟəʀɪ ᴛᴀᴘ"""
+**🔍 Qarışıq sözləri tap**"""
             await c.send_message(m.chat.id, text)
             
         else:
-            await c.send_message(m.chat.id, f"<code>**❗ 3 dəfə keçid etməyiniz tamamlandı </code>\n🔻 Oyunu dayandırmaq üçün /dayan yazın**")
+            await c.send_message(m.chat.id, f"<code>**❗ 3 dəfə keçid etməyiniz tamamlandı </code>**\n**🔻 Oyunu dayandırmaq üçün /dayan yazın**")
     else:
-        await m.reply(f"❗ **Qrupunuzda aktiv oyun oynanılır!\n Yeni bir oyuna başlamaq üçün /oyna yazabilərsiniz✍🏻**")
+        await m.reply(f"**❕ Oyun  ələ də davam edir**\n**🔻 Yenidən başlamaq üçün /oyna yazın**")
         
         
         
@@ -111,7 +111,7 @@ from pyrogram.types import Message
 @app.on_message(filters.command("qlobal"))
 async def ratingsa(c:Client, m:Message):
     global rating
-    metin = """🏆 Ən şanslı qlobal oyunçular:
+    metin = """**🏆 Ən şanslı qlobal oyunçular:**
 
 """
     eklenen = 0
@@ -162,7 +162,7 @@ async def stop(c:Client, m:Message):
     for i in siralama:
         siralama_text += i + "\n"     
     
-    await c.send_message(m.chat.id, f"**{m.from_user.mention}** tərəfindən dayandırıldı\n\nYenidən başlamaq üçün /oyna yazın\n{siralama_text}")
+    await c.send_message(m.chat.id, f"{m.from_user.mention} **tərəfindən dayandırıldı**\n\n**Yenidən başlamaq üçün /oyna yazın**\n{siralama_text}")
     oyun[m.chat.id] = {}
     
         
@@ -190,7 +190,7 @@ async def buldu(c:Client, m:Message):
     try:
         if m.chat.id in oyun:
             if m.text.lower() == oyun[m.chat.id]["kelime"]:
-                await c.send_message(m.chat.id,f"**{m.from_user.mention} <code>{oyun[m.chat.id]['kelime']}</code>** sözünü tapdı ✅")
+                await c.send_message(m.chat.id,f"{m.from_user.mention} <code>{oyun[m.chat.id]['kelime']}</code> **sözünü tapdı ✅**")
                 if f"{m.from_user.mention}" in rating:
                     rating[f"{m.from_user.mention}"] += 1
                 else:
@@ -215,7 +215,7 @@ async def buldu(c:Client, m:Message):
                     for i in siralama:
                         siralama_text += i + "\n"
                     
-                    return await c.send_message(m.chat.id,f"✅ Oyun Qutardı✓ \n\n📝 Qazandığı Xal :\n\n{siralama_text}\n\n Yeni Oyuna Başlamaq üçün /oyun Yaza Bilərsən !")
+                    return await c.send_message(m.chat.id,f"**✅ Oyun bitdi**\n\n{siralama_text}\n\n**🔻 Yenidən oyuna başlamaq üçün /oyna yazın**")
                 
                 
                 
@@ -226,13 +226,13 @@ async def buldu(c:Client, m:Message):
                     kelime_list+= harf + " "
             
                 text = f"""
-🎯 ʀᴀᴜɴᴅ: {oyun[m.chat.id]['round']}/20
-ℹ️ ᴛᴀᴘɪʟᴀᴄᴀǫ sᴏ̈ᴢ: <code>{kelime_list}</code>
-💰 ᴠᴇʀɪʟᴇᴄᴇᴋ xᴀʟ: (1)
-💡 ɪʟᴋ ʜəʀғ: {oyun[m.chat.id]["kelime"][0]}
-📐 ᴜᴢᴜɴʟᴜǫ: {int(len(kelime_list)/2)} 
+**🎯 Raund:** {oyun[m.chat.id]['round']}/20
+**ℹ️ Tapılacaq söz:** <code>{kelime_list}</code>
+**💰 Veriləcək xal:** (1)
+**💡 İlk hərf:** {oyun[m.chat.id]["kelime"][0]}
+**📐 Uzunluq:** {int(len(kelime_list)/2)} 
 
-🔍 ǫᴀʀɪşɪǫ sᴏ̈ᴢʟəʀɪ ᴛᴀᴘ"""
+**🔍 Qarışıq sözləri tap**"""
                 await c.send_message(m.chat.id, text)
     except KeyError:
         pass
