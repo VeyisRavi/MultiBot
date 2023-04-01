@@ -11,7 +11,7 @@ from pyrogram.types import Message
 
 
 # Oyunu başlat. 
-@app.on_message(filters.command("game")) 
+@app.on_message(filters.command("oyna")) 
 async def kelimeoyun(c:Client, m:Message):
     global oyun
     aktif = False
@@ -22,9 +22,9 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun Onsuzda Qrupnuzda Davam edir ✍🏻 \n Oyunu dayandırmaq üçün /stop yazabilərsiniz")
+        await m.reply("**Oyun hələ də davam edir ❕\n🔻 Oyunu dayandırmaq üçün /dayan yazın")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nHər birinizə uğurlar ❤️✨ !",reply_markup=kanal) 
+        await m.reply(f"**{m.from_user.mention}** tərəfindən oyun başladı 🎉",reply_markup=kanal) 
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
@@ -40,14 +40,13 @@ async def kelimeoyun(c:Client, m:Message):
             kelime_list+= harf + " "
         
         text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/20 
-📝 Tapılacaq Söz :   <code>{kelime_list}</code>
-💰 Yığdınız Xal: 1
-🔎 İlk Hərf: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
+🎯 ʀᴀᴜɴᴅ: {oyun[m.chat.id]['round']}/20 
+ℹ️ ᴛᴀᴘɪʟᴀᴄᴀǫ sᴏ̈ᴢ: <code>{kelime_list}</code>
+💰 ᴠᴇʀɪʟᴇᴄᴇᴋ xᴀʟ: (1)
+💡 ɪʟᴋ ʜəʀғ: {oyun[m.chat.id]["kelime"][0]}
+📐 ᴜᴢᴜɴʟᴜǫ: {int(len(kelime_list)/2)} 
 
-✏️ Qarışıq Həriflərdən düzgün sözü tapın.
-        """
+🔍 ǫᴀʀɪşɪǫ sᴏ̈ᴢʟəʀɪ ᴛᴀᴘ"""
         await c.send_message(m.chat.id, text)
         
         
@@ -73,7 +72,7 @@ async def passs(c:Client, m:Message):
     if aktif:
         if oyun[m.chat.id]["kec"] < 3:
             oyun[m.chat.id]["kec"] += 1 
-            await c.send_message(m.chat.id,f"😑 Maksimum 3 keçmə haqqınız var!\n➡️ Söz uğurla keçildi !\n✏️ Düzgün Söz : **<code>{oyun[m.chat.id]['kelime']}</code>**")
+            await c.send_message(m.chat.id,f"❕ Maksimum 3 keçmə haqqınız var\n➡️ Söz keçid edildi\n✅ Düzgün Söz: **<code>{oyun[m.chat.id]['kelime']}</code>**")
             
             oyun[m.chat.id]["kelime"] = kelime_sec()
             oyun[m.chat.id]["aktif"] = True
@@ -86,20 +85,19 @@ async def passs(c:Client, m:Message):
                 kelime_list+= harf + " "
             
             text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/20 
-📝 Tapılacaq Sözlər :   <code>{kelime_list}</code>
-💰 Qazandığın Xal : 1
-🔎 İlk hərf : 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 𝖴𝗓𝗎𝗇𝗅uq: {int(len(kelime_list)/2)} 
+🎯 ʀᴀᴜɴᴅ: {oyun[m.chat.id]['round']}/20 
+ℹ️ ᴛᴀᴘɪʟᴀᴄᴀǫ sᴏ̈ᴢ: <code>{kelime_list}</code>
+💰 ᴠᴇʀɪʟᴇᴄᴇᴋ xᴀʟ: (1)
+💡 ɪʟᴋ ʜəʀғ: {oyun[m.chat.id]["kelime"][0]}
+📐 ᴜᴢᴜɴʟᴜǫ: {int(len(kelime_list)/2)} 
 
-✏️ Qarışıq həriflərdən düzgün sözü tapın.
-            """
+🔍 ǫᴀʀɪşɪǫ sᴏ̈ᴢʟəʀɪ ᴛᴀᴘ"""
             await c.send_message(m.chat.id, text)
             
         else:
-            await c.send_message(m.chat.id, f"<code>**❗ Keçiş Düzgün Qeydedildi! </code> \n Oyunu dayandırmaq üçün yazıb /stop dayandıra bilərsiniz ✍🏻**")
+            await c.send_message(m.chat.id, f"<code>**❗ 3 dəfə keçid etməyiniz tamamlandı </code>\n🔻 Oyunu dayandırmaq üçün /dayan yazın**")
     else:
-        await m.reply(f"❗ **Qrupunuzda aktiv oyun oynanılır!\n Yeni bir oyuna başlamaq üçün /game yazabilərsiniz✍🏻**")
+        await m.reply(f"❗ **Qrupunuzda aktiv oyun oynanılır!\n Yeni bir oyuna başlamaq üçün /oyna yazabilərsiniz✍🏻**")
         
         
         
@@ -110,10 +108,10 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 
-@app.on_message(filters.command("skor"))
+@app.on_message(filters.command("qlobal"))
 async def ratingsa(c:Client, m:Message):
     global rating
-    metin = """📝 Küresel Grup Derecelendirmesi :
+    metin = """🏆 Ən şanslı qlobal oyunçular:
 
 """
     eklenen = 0
@@ -124,7 +122,7 @@ async def ratingsa(c:Client, m:Message):
     for puan in puanlar:
         for kisi in rating:
             if puan == rating[kisi]:
-                metin += f"**{kisi}** : {puan}  Puan\n"
+                metin += f"**{kisi}** {puan} Xal\n"
                 eklenen += 1
                 if eklenen == 20:
                     break
@@ -152,19 +150,19 @@ from helpers.kelimeler import kelime_sec
 
 
 
-@app.on_message(filters.command("stop") & ~filters.private & ~filters.channel)
+@app.on_message(filters.command("dayan") & ~filters.private & ~filters.channel)
 async def stop(c:Client, m:Message):
     global oyun
     
     siralama = []
     for i in oyun[m.chat.id]["oyuncular"]:
-        siralama.append(f"{i}   :   {oyun[m.chat.id]['oyuncular'][i]} Bal")
+        siralama.append(f"{i} {oyun[m.chat.id]['oyuncular'][i]} Xal")
     siralama.sort(reverse=True)
     siralama_text = ""
     for i in siralama:
         siralama_text += i + "\n"     
     
-    await c.send_message(m.chat.id, f"**{m.from_user.mention}** Tərəfindən Oyun Dayandırıldı \n\nYeni Oyuna Başlamaq üçün/oyun Yaza Bilərsiniz\n\n 📝 Yığdığınız Xal  :\n\n{siralama_text}")
+    await c.send_message(m.chat.id, f"**{m.from_user.mention}** tərəfindən dayandırıldı\n\nYenidən başlamaq üçün /oyna yazın\n{siralama_text}")
     oyun[m.chat.id] = {}
     
         
@@ -192,7 +190,7 @@ async def buldu(c:Client, m:Message):
     try:
         if m.chat.id in oyun:
             if m.text.lower() == oyun[m.chat.id]["kelime"]:
-                await c.send_message(m.chat.id,f"✨ Təbriklər !\n**{m.from_user.mention}** \n**<code>{oyun[m.chat.id]['kelime']}</code>** , Sözünü Tapdı 🤩")
+                await c.send_message(m.chat.id,f"**{m.from_user.mention} <code>{oyun[m.chat.id]['kelime']}</code>** sözünü tapdı ✅")
                 if f"{m.from_user.mention}" in rating:
                     rating[f"{m.from_user.mention}"] += 1
                 else:
@@ -228,14 +226,13 @@ async def buldu(c:Client, m:Message):
                     kelime_list+= harf + " "
             
                 text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/20
-📝 Tapılacaq Söz :   <code>{kelime_list}</code>
-💰 Yığdığınız Xal: 1
-🔎 İlk hərf: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
+🎯 ʀᴀᴜɴᴅ: {oyun[m.chat.id]['round']}/20
+ℹ️ ᴛᴀᴘɪʟᴀᴄᴀǫ sᴏ̈ᴢ: <code>{kelime_list}</code>
+💰 ᴠᴇʀɪʟᴇᴄᴇᴋ xᴀʟ: (1)
+💡 ɪʟᴋ ʜəʀғ: {oyun[m.chat.id]["kelime"][0]}
+📐 ᴜᴢᴜɴʟᴜǫ: {int(len(kelime_list)/2)} 
 
-✏️ Qarışıq həriflərdən düzgün sözü tapın.
-                        """
+🔍 ǫᴀʀɪşɪǫ sᴏ̈ᴢʟəʀɪ ᴛᴀᴘ"""
                 await c.send_message(m.chat.id, text)
     except KeyError:
         pass
