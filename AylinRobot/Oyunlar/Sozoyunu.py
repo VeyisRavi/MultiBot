@@ -111,7 +111,7 @@ from pyrogram.types import Message
 @app.on_message(filters.command("reytinq"))
 async def ratingsa(c:Client, m:Message):
     global rating
-    metin = """**🏆 Ən şanslı qlobal oyunçular:**
+    metin = """**🏆 Ən yaxşı oyunçular:**
 
 """
     eklenen = 0
