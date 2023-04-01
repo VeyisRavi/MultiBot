@@ -108,7 +108,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 
-@app.on_message(filters.command("qlobal"))
+@app.on_message(filters.command("reytinq"))
 async def ratingsa(c:Client, m:Message):
     global rating
     metin = """**🏆 Ən şanslı qlobal oyunçular:**
