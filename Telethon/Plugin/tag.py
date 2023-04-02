@@ -941,7 +941,6 @@ Aylin = (
 
 @client.on(events.NewMessage(pattern='(?i)peysər+'))
 @client.on(events.NewMessage(pattern='(?i)qəhbə+'))
-@client.on(events.NewMessage(pattern='(?i)göt+'))
 @client.on(events.NewMessage(pattern='(?i)cındır+'))
 @client.on(events.NewMessage(pattern='(?i)peyser+'))
 @client.on(events.NewMessage(pattern='(?i)qehbe+'))
@@ -970,7 +969,6 @@ Aylin = (
 @client.on(events.NewMessage(pattern='(?i)bləd+'))
 @client.on(events.NewMessage(pattern='(?i)cindir+'))
 @client.on(events.NewMessage(pattern='(?i)ostur+'))
-@client.on(events.NewMessage(pattern='(?i)got+'))
 @client.on(events.NewMessage(pattern='(?i)dumsuy+'))
 @client.on(events.NewMessage(pattern='(?i)dumsuk+'))
 @client.on(events.NewMessage(pattern='(?i)slk+'))
