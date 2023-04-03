@@ -888,7 +888,7 @@ async def handler(event):
 
 userjoin = (
 
-    "Salam xoş gəlmisiniz, Bu qrupun məqsədi Şəhidlərimizi tanımaq və unutmamaq üçün açılıb, Hərkəs öz Şəhidi haqqında məlumat versin, Allah bütün Şəhidlərimizə rəhmət eləsin 🇦🇿\n\n@sehidlerunudma 🇦🇿",
+    "Salam xoş gəlmisiniz, Bu qrupun məqsədi Şəhidlərimizi tanımaq və unutmamaq üçün açılıb, Hərkəs öz Şəhidi haqqında məlumat versin.\nAllah bütün Şəhidlərimizə rəhmət eləsin 🇦🇿\n\n@sehidlerunudma 🇦🇿",
     ""
 )
 
