@@ -888,19 +888,7 @@ async def handler(event):
 
 userjoin = (
 
-    "Xoş gəldiniz",
-    "Salamm əyləncə dolu qrupumuza xoş gəlmisiniz🥰",
-    "Salam xoş gəldin👀🙊",
-    "Salam xoş gəlmisən @qruzdaa kanalımada abunə ol🙈",
-    "Xoş gəldin balam😂❤️",
-    "Xoş gəldin nəfəsss😂❤️",
-    "Xoş gəldin vətəndaş🤓",
-    "Xoş gəldin aramıza😌❤️",
-    "Salam xoş gəldin səni burda görmək çox xoşdur😍",
-    "Salam xoş gəldin gözəl insan🥰",
-    "Salam xoş gəldin necəsən?🥰",
-    "Salamm xanım xoş gəldin tanış olmaq olar?👀😂",
-    "Bayaqdan səni gözləyirəme gəl çıxda😒",
+    "Salam xoş gəlmisiniz, Bu qrupun məqsədi Şəhidlərimizi tanımaq və unutmamaq üçün açılıb, Hərkəs öz Şəhidi haqqında məlumat versin, Allah bütün Şəhidlərimizə rəhmət eləsin 🇦🇿\n\n@sehidlerunudma 🇦🇿",
     ""
 )
 
