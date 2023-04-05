@@ -970,7 +970,6 @@ Aylin = (
 @client.on(events.NewMessage(pattern='(?i)amcıg+'))
 @client.on(events.NewMessage(pattern='(?i)gehbe+'))
 @client.on(events.NewMessage(pattern='(?i)siik+'))
-@client.on(events.NewMessage(pattern='(?i)sic+'))
 @client.on(events.NewMessage(pattern='(?i)gij+'))
 @client.on(events.NewMessage(pattern='(?i)sg+'))
 @client.on(events.NewMessage(pattern='(?i)qəhi+'))
