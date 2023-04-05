@@ -97,7 +97,7 @@ async def passs(c:Client, m:Message):
         else:
             await c.send_message(m.chat.id, f"<code>**❗ 3 dəfə keçid etməyiniz tamamlandı </code>**\n**🔻 Oyunu dayandırmaq üçün /dayan yazın**")
     else:
-        await m.reply(f"**❕ Oyun  ələ də davam edir**\n**🔻 Yenidən başlamaq üçün /oyna yazın**")
+        await m.reply(f"**❕ Oyun hələ də davam edir**\n**🔻 Yenidən başlamaq üçün /oyna yazın**")
         
         
         
