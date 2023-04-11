@@ -13,7 +13,7 @@ async def calculate_wealth(client, message):
     user = message.reply_to_message.from_user
     user_name = user.first_name if not user.last_name else f"{user.first_name} {user.last_name}"
     # Tahmin edilen mal varlığı yüzdesini mesaj olarak gönderin
-    await message.reply(f"{user_name}, sizin mal varlığınızın %{wealth_percent} olduğunu tahmin ediyorum.")
+    await message.reply(f"{user_name} sən %{wealth_percent} malsan😹")
 
 
 
@@ -25,4 +25,4 @@ async def calculate_wealth(client, message):
     user = message.reply_to_message.from_user
     user_name = user.first_name if not user.last_name else f"{user.first_name} {user.last_name}"
     # Tahmin edilen mal varlığı yüzdesini mesaj olarak gönderin
-    await message.reply(f"{user_name}, sizin mal varlığınızın %{wealth_percent} olduğunu tahmin ediyorum.")
+    await message.reply(f"{user_name} sən %{wealth_percent} malsan😹")
