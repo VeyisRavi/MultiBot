@@ -888,7 +888,7 @@ async def handler(event):
 
 userjoin = (
 
-    "Salam xoş gəlmisiniz doğma məkanımıza😍",
+    "{ad} Salam xoş gəlmisiniz doğma məkanımıza😍",
     ""
 )
 
