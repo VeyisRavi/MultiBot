@@ -888,7 +888,19 @@ async def handler(event):
 
 userjoin = (
 
-    "{ad} Salam xoş gəlmisiniz doğma məkanımıza😍",
+    "Salam xoş gəlmisiniz doğma məkanımıza😍",
+    "Salam xoş gəldin qrupa🌹",
+    "Salam əleykum xoş gəldin",
+    "Salam gözəl insan, sən haralısan belə?😁",
+    "Salam telegramın ən mehriban qrupuna xoş gəldin, səni aramızda görmək çox xoşdur🥂",
+    "Salam xoş gəldin, keç otur çay içək😍\n@MissRose_bot az buna çay gətir içsin",
+    "Salam, siz İrandan gəlirsiz yoxsa Pakistandan🤔",
+    "Salam xoş gəldin, çox gözəlsən as😍",
+    "Xoş gəldin as😂",
+    "Salamm xoş gəldin balam♥️🥂",
+    "Salam xoş gəlmisiniz, mən sizi hardasa görmüşəm🙄",
+    "Xoş gəldin nəfəs😂",
+    "Azz haralardasan gəl çıxda😂",
     ""
 )
 
