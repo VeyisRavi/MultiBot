@@ -1019,25 +1019,3 @@ async def eros(event):
                        f"[{sev1.first_name}](tg://user?id={sev1.id})" + f" 🔐 [{sev2.first_name}](tg://user?id={sev2.id})\n"
                        f"**Eşq Faizi:** {random.choice(faiz)}")
     
-    
-from os import remove
-from telethon.tl.functions.users import GetFullUserRequest
-
-
-
-@client.on(events.NewMessage(pattern="^/banda ?(.*)"))
-async def banda(event):
-    if not event.is_group:
-        return await event.reply("**ℹ️ Bu əmr qruplar üçün nəzərdə tutulub**")
-    info = await event.client.get_entity(event.chat_id)
-    title = info.title if info.title else "This chat"
-    mentions = f'**{title}** qrupunda olan silinən hesablar:\n'
-    deleted = 0
-    async for user in event.client.iter_participants(event.chat_id):
-        if user.deleted:
-            mentions += f"\n🗑️ Çıxarıldı: `{user.id}`"
-            deleted += 1
-            await event.client.kick_participant(event.chat_id, user.id)
-    mentions += f"\n\n👤 Silinən hesabların sayı: `{deleted}`"
-    await event.reply(mentions)
-
