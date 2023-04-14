@@ -33,7 +33,7 @@ async def calculate_wealth(client, message):
 from pyrogram import Client, filters
 
 # Kaba kelimeler listesi
-bad_words = ['göt', 'sik', 'peysər', 'cındır', 'qehbe', 'qəhbə', 'cindir', 'peyser', 'küçük', 'suka', 'blət', 'blet', 'pidr', 'dalbayok', 'sirtiq', 'porno', 'xnxx', 'küçüy', 'kucuy', 'sırtıq', 'gic', 'dalyok', 'qehbə', 'qəhbe', 'amcığ', 'amcıq', 'bləd', 'bled', 'amk', 'ostur', 'dumsuk', 'dumsuy', 'pox', 'slk', 'qehebe', 'qehbbe', 'qot', 'gəhbə', 'amcıg', 'siik', 'gehbe', 'sg', 'gij', 'qəhi', 'qehi', 'meki', 'məki', 'amciq', 'amcig']
+bad_words = ['göt', 'sik', 'peysər', 'cındır', 'qehbe', 'qəhbə', 'cindir', 'peyser', 'küçük', 'suka', 'blət', 'blet', 'pidr', 'dalbayok', 'sirtiq', 'porno', 'xnxx', 'küçüy', 'kucuy', 'sırtıq', 'gic', 'dalyok', 'qehbə', 'qəhbe', 'amcığ', 'amcıq', 'bləd', 'bled', 'amk', 'ostur', 'dumsuk', 'dumsuy', 'pox', 'slk', 'qehebe' , 'qehbbe', 'qot', 'gəhbə', 'amcıg', 'siik', 'gehbe', 'sg', 'gij', 'qəhi', 'qehi', 'meki', 'məki', 'amciq', 'amcig']
 
 
 users = {}
