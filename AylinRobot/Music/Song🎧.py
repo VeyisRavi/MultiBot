@@ -10,6 +10,7 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram import Client, filters
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
+from helpers.filters import command
 from AylinRobot.config import Config
 from pyrogram.types import (
     InlineKeyboardButton,
@@ -30,7 +31,7 @@ buttons = {
 }
 
 
-@app.on_message(filters.command(["song", f"song@{Config.BOT_USERNAME}"]))
+@app.on_message(command(["song", f"song@{Config.BOT_USERNAME}"]))
 def song(client, message):
 
     message.delete()
