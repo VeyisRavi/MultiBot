@@ -28,10 +28,6 @@ async def calculate_wealth(client, message):
     await message.reply(f"{user_name} ilə sənin eşq faizin %{wealth_percent} 💕")
 
 
-
-
-from pyrogram import Client, filters
-
 # Kaba kelimeler listesi
 bad_words = ['göt', 'sik', 'peysər', 'cındır', 'qehbe', 'qəhbə', 'cindir', 'peyser', 'küçük', 'suka', 'blət', 'blet', 'pidr', 'dalbayok', 'sirtiq', 'porno', 'xnxx', 'küçüy', 'kucuy', 'sırtıq', 'gic', 'dalyok', 'qehbə', 'qəhbe', 'amcığ', 'amcıq', 'bləd', 'bled', 'amk', 'ostur', 'dumsuk', 'dumsuy', 'pox', 'slk', 'qehebe' , 'qehbbe', 'qot', 'gəhbə', 'amcıg', 'siik', 'gehbe', 'sg', 'gij', 'qəhi', 'qehi', 'meki', 'məki', 'amciq', 'amcig']
 
@@ -40,9 +36,9 @@ users = {}
 
 # Mesajları filtreleme işlemi
 @app.on_message(filters.text & ~filters.private)
-async def filter_bad_words(client, message):
+async def filter_bad_words(app, message):
     for word in bad_words:
-        if word in message.text.lower():
+        if word.lower() in message.text.lower():
             # Mesajı atan kişinin kimliğini alın
             user_id = message.from_user.id
             # Küfür sayısını arttırın veya yeni bir kullanıcı ekleyin
@@ -50,9 +46,9 @@ async def filter_bad_words(client, message):
                 users[user_id] += 1
             else:
                 users[user_id] = 1
-            # Küfür eden kişiye özel mesaj gönderin
-            await client.send_message(chat_id=user_id, text="🔞 Qrupda söyüş yazdığına görə mesajını sildim\n\n🗑️ Sənin silinən mesajların sayı: {}".format(users[user_id]))
             # Küfür içeren mesajı silin
             await message.delete()
+            # Küfür eden kişiye yanıt olarak mesaj gönderin
+            await message.reply_text("🔞 Küfür içeren mesajınız silindi.\n\n🗑️ Toplam silinen mesaj sayınız: {}".format(users[user_id]))
             # Küfür eden kişiye qrupda sildiğini bildirin
-            await client.send_message(chat_id=message.chat.id, text="{} İstifadəçi söyüş yazdığına görə mesajı sildim.".format(message.from_user.first_name))
+            await app.send_message(chat_id=message.chat.id, text="{} adlı kullanıcının küfürlü mesajı silindi.".format(message.from_user.first_name))
