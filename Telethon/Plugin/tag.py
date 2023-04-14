@@ -889,7 +889,7 @@ async def handler(event):
         mesaj = (f"{username} Xoş gəldin",
                  f"{username} Gəldi 🙄",
                  f"{username} Sənin Gəlişin Məni Sevindirdi 🫠", 
-                 f"{username} Aramıza Xoş Gəldin 🙋‍♀️",
+                 f"{username} Aramıza Xoş Gəldin 🙋🏻",
                  f"{username} Partimizə Xoş Gəldin🥳",
                  f"{username} Bayaqdan Səni Gözləyirəm 🤩",
                  f"{username} Xoşgəldin, Pizza gətirəcəyivi düşünürdük. 🤠",
@@ -929,64 +929,6 @@ Aylin = (
     "Nə istəyirsən ondan?",
     ""
 )
-
-
-@client.on(events.NewMessage(pattern='(?i)peysər+'))
-@client.on(events.NewMessage(pattern='(?i)qəhbə+'))
-@client.on(events.NewMessage(pattern='(?i)cındır+'))
-@client.on(events.NewMessage(pattern='(?i)peyser+'))
-@client.on(events.NewMessage(pattern='(?i)qehbe+'))
-@client.on(events.NewMessage(pattern='(?i)suka+'))
-@client.on(events.NewMessage(pattern='(?i)küçük+'))
-@client.on(events.NewMessage(pattern='(?i)blet+'))
-@client.on(events.NewMessage(pattern='(?i)blət+'))
-@client.on(events.NewMessage(pattern='(?i)dalbayok+'))
-@client.on(events.NewMessage(pattern='(?i)pidr+'))
-@client.on(events.NewMessage(pattern='(?i)xnxx+'))
-@client.on(events.NewMessage(pattern='(?i)porno+'))
-@client.on(events.NewMessage(pattern='(?i)sirtiq+'))
-@client.on(events.NewMessage(pattern='(?i)sırtıq+'))
-@client.on(events.NewMessage(pattern='(?i)kucuy+'))
-@client.on(events.NewMessage(pattern='(?i)küçüy+'))
-@client.on(events.NewMessage(pattern='(?i)gic+'))
-@client.on(events.NewMessage(pattern='(?i)sik+'))
-@client.on(events.NewMessage(pattern='(?i)dalyok+'))
-@client.on(events.NewMessage(pattern='(?i)oruspo+'))
-@client.on(events.NewMessage(pattern='(?i)qehbə+'))
-@client.on(events.NewMessage(pattern='(?i)qəhbe+'))
-@client.on(events.NewMessage(pattern='(?i)amcıq+'))
-@client.on(events.NewMessage(pattern='(?i)amcığ+'))
-@client.on(events.NewMessage(pattern='(?i)amk+'))
-@client.on(events.NewMessage(pattern='(?i)bled+'))
-@client.on(events.NewMessage(pattern='(?i)bləd+'))
-@client.on(events.NewMessage(pattern='(?i)cindir+'))
-@client.on(events.NewMessage(pattern='(?i)ostur+'))
-@client.on(events.NewMessage(pattern='(?i)dumsuy+'))
-@client.on(events.NewMessage(pattern='(?i)dumsuk+'))
-@client.on(events.NewMessage(pattern='(?i)slk+'))
-@client.on(events.NewMessage(pattern='(?i)pox+'))
-@client.on(events.NewMessage(pattern='(?i)qehbbeninnn+'))
-@client.on(events.NewMessage(pattern='(?i)qehebe+'))
-@client.on(events.NewMessage(pattern='(?i)qehbbeeeeee'))
-@client.on(events.NewMessage(pattern='(?i)qehbbbeeee+'))
-@client.on(events.NewMessage(pattern='(?i)gəhbə+'))
-@client.on(events.NewMessage(pattern='(?i)qot+'))
-@client.on(events.NewMessage(pattern='(?i)amcıg+'))
-@client.on(events.NewMessage(pattern='(?i)gehbe+'))
-@client.on(events.NewMessage(pattern='(?i)siik+'))
-@client.on(events.NewMessage(pattern='(?i)gij+'))
-@client.on(events.NewMessage(pattern='(?i)sg+'))
-@client.on(events.NewMessage(pattern='(?i)qəhi+'))
-@client.on(events.NewMessage(pattern='(?i)qehi+'))
-@client.on(events.NewMessage(pattern='(?i)meki+'))
-@client.on(events.NewMessage(pattern='(?i)məki+'))
-async def mesaj(event: events.NewMessage.Event):
-    await event.delete()  
-    await event.reply(f"**🔞 Söyüş yazdığına görə mesajı sildim.**")
-
-
-
-
 
 
 import asyncio
