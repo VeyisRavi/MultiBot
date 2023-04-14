@@ -26,7 +26,7 @@ from helpers.filters import command
 
 AylinIMG = f"{Config.START_IMG}"
 
-@app.on_message(filters.private & filters.incoming & command(['start']))
+@app.on_message(filters.private & filters.incoming & filters.command(['start']))
 async def start(client, message):
     await message.reply_photo(
         AylinIMG,
