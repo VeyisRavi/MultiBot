@@ -892,8 +892,8 @@ async def handler(event):
                  f"{username} Aramıza Xoş Gəldin 🙋‍♀️",
                  f"{username} Partimizə Xoş Gəldin🥳",
                  f"{username} Bayaqdan Səni Gözləyirəm 🤩",
-                 f"{username} Xoşgəldin, Pizza gətirəcəyivi düşnürdük. 🤠",
-                 f"{username} Xoşgəldin, Çıxacagsansa indidən çıx 😒.",)
+                 f"{username} Xoşgəldin, Pizza gətirəcəyivi düşünürdük. 🤠",
+                 f"{username} Xoşgəldin, Çıxacaqsansa indidən çıx 😒.",)
         await event.reply(f"{random.choice(mesaj)}")
 
 
