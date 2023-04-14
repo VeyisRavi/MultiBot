@@ -29,26 +29,3 @@ async def calculate_wealth(client, message):
 
 
 # Kaba kelimeler listesi
-bad_words = ['göt', 'sik', 'peysər', 'cındır', 'qehbe', 'qəhbə', 'cindir', 'peyser', 'küçük', 'suka', 'blət', 'blet', 'pidr', 'dalbayok', 'sirtiq', 'porno', 'xnxx', 'küçüy', 'kucuy', 'sırtıq', 'gic', 'dalyok', 'qehbə', 'qəhbe', 'amcığ', 'amcıq', 'bləd', 'bled', 'amk', 'ostur', 'dumsuk', 'dumsuy', 'pox', 'slk', 'qehebe' , 'qehbbe', 'qot', 'gəhbə', 'amcıg', 'siik', 'gehbe', 'sg', 'gij', 'qəhi', 'qehi', 'meki', 'məki', 'amciq', 'amcig']
-
-
-users = {}
-
-# Mesajları filtreleme işlemi
-@app.on_message(filters.text & ~filters.private)
-async def filter_bad_words(client, message):
-    for word in bad_words:
-        if word in message.text.lower():
-            # Mesajı atan kişinin kimliğini alın
-            user_id = message.from_user.id
-            # Küfür sayısını arttırın veya yeni bir kullanıcı ekleyin
-            if user_id in users:
-                users[user_id] += 1
-            else:
-                users[user_id] = 1
-            # Küfür eden kişiye özel mesaj gönderin
-            await client.send_message(chat_id=user_id, text="🔞 Qrupda söyüş yazdığına görə mesajını sildim\n\n🗑️ Silinən mesajların sayı: {}".format(users[user_id]))
-            # Küfür içeren mesajı silin
-            await message.delete()
-            # Küfür eden kişiye qrupda sildiğini bildirin
-            await client.send_message(chat_id=message.chat.id, text="{} söyüş yazdığına görə mesajını sildim.".format(message.from_user.first_name))
