@@ -3,7 +3,7 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-
+from helpers.filters import command
 from AylinRobot import AylinRobot as app
 from pyrogram.errors import FloodWait
 from pyrogram import Client, filters
@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@app.on_message(filters.command(["search"]))
+@app.on_message(command(["search"]))
 async def search(_, message: Message):
     m = await message.delete()  
     try:
