@@ -10,6 +10,7 @@ from AylinRobot.config import Config
 import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp, lyricsgenius
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
+from helpers.filters import command
 from pyrogram.types import Message, User
 from pyrogram.types import (
     InlineKeyboardButton,
@@ -18,7 +19,7 @@ from pyrogram.types import (
 )
 
 
-@app.on_message(filters.command(["lyrics"]))
+@app.on_message(command(["lyrics"]))
 async def lyrics(_, message: Message):
     m = await message.delete()  
     if len(message.command) < 2:
