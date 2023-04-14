@@ -953,3 +953,30 @@ async def eros(event):
                        f"[{sev1.first_name}](tg://user?id={sev1.id})" + f" 🔐 [{sev2.first_name}](tg://user?id={sev2.id})\n"
                        f"**Eşq Faizi:** {random.choice(faiz)}")
     
+
+
+from telethon import TelegramClient, events, sync
+
+
+bad_words = ['göt', 'sik', 'peysər', 'cındır', 'qehbe', 'qəhbə', 'cindir', 'peyser', 'küçük', 'suka', 'blət', 'blet', 'pidr', 'dalbayok', 'sirtiq', 'porno', 'xnxx', 'küçüy', 'kucuy', 'sırtıq', 'gic', 'dalyok', 'qehbə', 'qəhbe', 'amcığ', 'amcıq', 'bləd', 'bled', 'amk', 'ostur', 'dumsuk', 'dumsuy', 'pox', 'slk', 'qehebe' , 'qehbbe', 'qot', 'gəhbə', 'amcıg', 'siik', 'gehbe', 'sg', 'gij', 'qəhi', 'qehi', 'meki', 'məki', 'amciq', 'amcig']
+
+async def delete_bad_message(event):
+    # Mesajı gönderen kişinin kimliği
+    user_id = event.sender_id
+
+    # Mesajın içeriği
+    message_text = event.message.message.lower()
+
+    # Eğer mesaj küfür içeriyorsa, mesajı sil
+    if any(word in message_text for word in bad_words):
+        await event.delete()
+
+# Küfür içeren mesajları dinleyin ve silin
+@client.on(events.NewMessage)
+async def my_event_handler(event):
+    await delete_bad_message(event)
+
+# Telegram hesabınızla oturum açın
+with client:
+    # Mesajları dinlemeye başlayın
+    client.run_until_disconnected()
