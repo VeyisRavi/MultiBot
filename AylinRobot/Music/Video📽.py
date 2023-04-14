@@ -7,9 +7,9 @@ from yt_dlp import YoutubeDL
 from youtube_search import YoutubeSearch
 from pyrogram import Client, filters
 from AylinRobot import AylinRobot as app
+from helpers.filters import command
 
-
-@app.on_message(filters.command(["video"]))
+@app.on_message(command(["video"]))
 async def video(client, message):
     ydl_opts = {
         "format": "best",
