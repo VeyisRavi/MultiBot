@@ -51,7 +51,7 @@ async def filter_bad_words(client, message):
             else:
                 users[user_id] = 1
             # Küfür eden kişiye özel mesaj gönderin
-            await client.send_message(chat_id=user_id, text="🔞 Qrupda söyüş yazdığına görə mesajını sildim!\n\n🗑️ Silinən mesajların ümumi sayı: {}".format(users[user_id]))
+            await client.send_message(chat_id=user_id, text="🔞 Qrupda söyüş yazdığına görə mesajını sildim\n\n🗑️ Sənin silinən mesajların sayı: {}".format(users[user_id]))
             # Küfür içeren mesajı silin
             await message.delete()
             # Küfür eden kişiye qrupda sildiğini bildirin
