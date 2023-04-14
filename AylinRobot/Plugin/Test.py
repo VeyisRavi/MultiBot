@@ -36,9 +36,9 @@ users = {}
 
 # Mesajları filtreleme işlemi
 @app.on_message(filters.text & ~filters.private)
-async def filter_bad_words(app, message):
+async def filter_bad_words(client, message):
     for word in bad_words:
-        if word.lower() in message.text.lower():
+        if word in message.text.lower():
             # Mesajı atan kişinin kimliğini alın
             user_id = message.from_user.id
             # Küfür sayısını arttırın veya yeni bir kullanıcı ekleyin
@@ -46,9 +46,9 @@ async def filter_bad_words(app, message):
                 users[user_id] += 1
             else:
                 users[user_id] = 1
+            # Küfür eden kişiye özel mesaj gönderin
+            await client.send_message(chat_id=user_id, text="Küfür etmek uygun değil. Lütfen dikkatli olun. Toplam küfür sayınız: {}".format(users[user_id]))
             # Küfür içeren mesajı silin
             await message.delete()
-            # Küfür eden kişiye yanıt olarak mesaj gönderin
-            await message.reply_text("🔞 Qrupda söyüş yazdığına görə mesajını sildim\n\n🗑️ Silinən mesajların sayı: {}".format(users[user_id]))
             # Küfür eden kişiye qrupda sildiğini bildirin
-            await app.send_message(chat_id=message.chat.id, text="{} İstifadəçi söyüş yazdığına görə mesajını sildim.".format(message.from_user.first_name))
+            await client.send_message(chat_id=message.chat.id, text="{} isimli kullanıcının küfürlü mesajı silindi.".format(message.from_user.first_name))
