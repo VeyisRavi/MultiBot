@@ -1007,4 +1007,5 @@ async def eros(event):
 @client.on(events.NewMessage(pattern='(?i)meki+'))
 @client.on(events.NewMessage(pattern='(?i)məki+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.reply(f" Söyüş Söymə")    
+    await event.delete()      
+    await event.reply(f" Söyüş Söymə") 
