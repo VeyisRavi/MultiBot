@@ -1014,7 +1014,7 @@ async def eros(event):
 @client.on(events.NewMessage(pattern='(?i)məki+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.delete()      
-    await event.reply(f" Söyüş Söymə") 
+    await event.reply(f"🔞 Söyüş yazdığına görə mesajı sildim.") 
 
 @client.on(events.NewMessage(incoming=True, pattern="^[!/]purge$"))
 async def purge_messages(event):
@@ -1045,7 +1045,7 @@ async def purge_messages(event):
 
     await event.client.delete_messages(event.chat_id, messages)
     time_ = time.perf_counter() - start
-    text = f"✅ Təmizləmə prosesi {time_:0.2f} saniyədə tamamlandı"
+    text = f"🗑️ Təmizləmə prosesi {time_:0.2f} saniyədə tamamlandı"
     await event.respond(text, parse_mode='markdown')
 
 
