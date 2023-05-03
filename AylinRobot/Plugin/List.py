@@ -92,6 +92,6 @@ async def on_new_chat_members(client, message: types.Message):
     for user in message.new_chat_members:
         if user.id == Config.OWNER_ID:
             bot_name = (await client.get_me()).username
-            reply_text = f"Sahibim {user.first_name} indicə qrupumuza qoşuldu. Xoş gəldin aramıza Sahibim🤩"
-            reply_gif_url = "https://telegra.ph/file/128e99d265d5dc7807a13.mp4"
+            reply_text = f"Sahibim @Rahid_7 indicə qrupumuza qoşuldu. Xoş gəldin aramıza Sahibim🤩"
+            reply_gif_url = ""
             await message.reply_animation(reply_gif_url, caption=reply_text)
