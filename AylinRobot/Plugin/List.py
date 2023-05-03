@@ -29,15 +29,15 @@ async def admins(client, message):
                 else:
                     adminList.append(admin.user)
         lenAdminList = len(ownerList) + len(adminList)
-        text2 = f"**Qrup İdarəçiləri - {message.chat.title}**\n\n"
+        text2 = f"**{message.chat.title} qrupun idarəçiləri**\n\n"
         try:
             owner = ownerList[0]
             if owner.username is None:
-                text2 += f"👑 Sahib\n└ {owner.first_name}\n\n👮🏻 İdarəçilər\n"
+                text2 += f"👑 Yaradıcı\n└ {owner.first_name}\n\n👥 İdarəçilər\n"
             else:
-                text2 += f"👑 Sahib\n└ @{owner.username}\n\n👮🏻 İdarəçilər\n"
+                text2 += f"👑 Yaradıcı\n└ @{owner.username}\n\n👥 İdarəçilər\n"
         except IndexError:
-            text2 += f"👑 Sahib\n└ <i>Gizlənib</i>\n\n👮🏻 İdarəçilər\n"
+            text2 += f"👑 Yaradıcı\n└ <i>Gizlənib</i>\n\n👥 İdarəçilər\n"
         if len(adminList) == 0:
             text2 += "└ <i>İdarəçilər gizlənib</i>"
             await message.reply_text(text2)
@@ -52,7 +52,7 @@ async def admins(client, message):
                 text2 += f"└ {owner.first_name}\n\n"
             else:
                 text2 += f"└ @{owner.username}\n\n"
-            text2 += f"✅ | **Cəmi idarəçi sayı**: {lenAdminList}\n❌ | Botlar və gizlənmiş idarəçilər qəbul edilmir."
+            text2 += f"✅ | **İdarəçi sayı:** {lenAdminList}\n❌ | Botlar və gizlənmiş idarəçilər qəbul edilmir."
             await message.reply_text(text2)
     except FloodWait as e:
         await asyncio.sleep(e.x)
@@ -67,10 +67,10 @@ async def bots(client, message):
             if member.user.is_bot:
                 botList.append(member.user)
         lenBotList = len(botList)
-        text3 = f"**BOT LİSTƏSİ - {message.chat.title}**\n\n🤖 Botlar\n"
+        text3 = f"**{message.chat.title} qrupundakı botlar 🤖**\n\n"
         for bot in botList:
-            text3 += f"├ @{bot.username}\n"
-        text3 += f"✅ | **Cəmi bot sayı**: {lenBotList}"
+            text3 += f"├ @{bot.username}\n\n"
+        text3 += f"✅ | **Bot sayı:** {lenBotList}"
         await message.reply_text(text3)
     except FloodWait as e:
         await asyncio.sleep(e.x)
@@ -82,16 +82,16 @@ async def banlist(client, message):
     chat = await client.get_chat(chat_id)
     banned_users = await client.get_chat_members(chat_id, filter="banned")
     if len(banned_users) == 0:
-        await message.reply("Bu grupta yasaklanmış kullanıcı yok.")
+        await message.reply("Bu qrupda qadağan olunmuş istifadəçi yoxdur.")
     else:
         ban_list_str = "\n".join([f"{i+1}. @{user.user.username}" for i, user in enumerate(banned_users)])
-        await message.reply(f"Bu grupta yasaklanmış kullanıcılar:\n{ban_list_str}")
+        await message.reply(f"Bu qrupda qadağan olunmuş istifadəçilər:\n{ban_list_str}")
 
 @app.on_message(filters.new_chat_members)
 async def on_new_chat_members(client, message: types.Message):
     for user in message.new_chat_members:
         if user.id == Config.OWNER_ID:
             bot_name = (await client.get_me()).username
-            reply_text = f"🙍‍♀️ {bot_name} -Un 👨‍💻 Sahibi {user.first_name} Gəldi Xoş Gəldin Sahibim ❤"
-            reply_gif_url = "https://telegra.ph/file/53382140cbcb4a6b795c9.mp4"
+            reply_text = f"Sahibim {user.first_name} indicə qrupumuza qoşuldu. Xoş gəldin aramıza Sahibim🤩"
+            reply_gif_url = "https://telegra.ph/file/128e99d265d5dc7807a13.mp4"
             await message.reply_animation(reply_gif_url, caption=reply_text)
