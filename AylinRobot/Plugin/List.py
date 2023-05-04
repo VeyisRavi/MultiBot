@@ -14,7 +14,7 @@ from helpers.filters import command
 
 
 
-@app.on_message(filters.command(["admins", "staff"]))
+@app.on_message(filters.command(["staff"]))
 async def admins(client, message):
     try:
         adminList = []
