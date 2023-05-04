@@ -20,4 +20,4 @@ async def logger(client, msj):
         )
         await client.send_message(chat_id, f"{msj.from_user.mention} mesaj uğurla log qrupuna göndərildi.")
     else:
-        await client.send_message(chat_id, f"reply elemelisen")
+        await client.send_message(chat_id, f"Bir mesaja yanıt ver.")
