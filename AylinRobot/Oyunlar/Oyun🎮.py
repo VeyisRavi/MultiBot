@@ -50,7 +50,7 @@ def play_game(game_name):
         emoji = games[0]["emoji"]
     return emoji, random.randint(1, 6)
 
-@app.on_message(command(["play"]))
+@app.on_message(command(["zar"]))
 async def handle_play_command(bot, message):
     if len(message.command) == 1:
         await message.reply("Which game do you want to play? Available games: " + ", ".join([game["name"] for game in games]))
