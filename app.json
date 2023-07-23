@@ -13,17 +13,17 @@
     "env": {
       "API_ID": {
         "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
-        "value": "21181263",
+        "value": "16157584",
         "required": true
       },
       "API_HASH": {
         "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
-        "value": "35d6a146b547d32426757191f5940bec",
+        "value": "2167d4e6007a79eed91d084bf5b8966a",
         "required": true
       },
       "BOT_TOKEN": {
         "description": "Botfather-dən Bot nişanı",
-        "value": "6114958708:AAExGBF0fKq3wcuW18RvuXvNLSwGD1Kpb6Q",
+        "value": "6152708456:AAF2xfhqFeUEVzB01pHVWKbzyTmewczaUys",
         "required": true
       }
     },
