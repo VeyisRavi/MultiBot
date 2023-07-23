@@ -1,0 +1,42 @@
+{
+    "name": "Telegram Music ダ Tag Bot",
+    "description": "Pyrogram və Py-Tgcalls ilə Python dilində yazılmış teleqram videoçatları & tag üçün VC Player & Tag Botu.",
+    "logo": "https://graph.org/file/35444b7d40fff28719e62.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "Fallen",
+    "MusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "env": {
+      "API_ID": {
+        "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
+        "value": "21181263",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
+        "value": "35d6a146b547d32426757191f5940bec",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "Botfather-dən Bot nişanı",
+        "value": "6114958708:AAExGBF0fKq3wcuW18RvuXvNLSwGD1Kpb6Q",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"
+  }
