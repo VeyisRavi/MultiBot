@@ -1,6 +1,5 @@
-# @AylinRobot
-#@MusicAzBot
-# Sahib @HuseynH
+# @TeleqramRobotBot
+# Sahib @byNYPD
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 from helpers.filters import command
