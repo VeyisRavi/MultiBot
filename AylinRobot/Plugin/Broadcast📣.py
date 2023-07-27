@@ -1,7 +1,3 @@
-# @AylinRobot
-# Sahib @HuseynH
-# Repo Açığdısa İcazəsis Götürmə Oğlum
-
 import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
 from AylinRobot.translation import *
 from AylinRobot.config import Config
@@ -114,7 +110,7 @@ async def broadcast_message(_, message):
     schats = await get_served_chats()
     chats = [int(chat["chat_id"]) for chat in schats]
     m = await message.reply_text(
-        f"Broadcast in progress, will take {len(chats) * sleep_time} seconds."
+        f"Yayım davam edir {len(chats) * sleep_time} seconds."
     )
     for i in chats:
         try:
