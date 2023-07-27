@@ -1,7 +1,3 @@
-# @AylinRobot
-# Sahib @HuseynH
-# Repo Açığdısa İcazəsis Götürmə Oğlum
-
 import time
 from AylinRobot import AylinRobot as app
 from pyrogram import Client, filters
@@ -60,7 +56,7 @@ async def Alive(client: Client, message: Message):
         ]
     )
 
-    alive = f"**Haycan👀❤️ {message.from_user.mention()}\n\nMənim Adım {Config.BOT_USERNAME}**\n⚡ Mən Süper İşləyirəm\n👨🏻‍💻 Sahibim: [{Config.ALIVE_NAME}](https://t.me/{Config.OWNER_NAME})\n🛡️ Bot Versiyası: `v{__version__}`\n🏷️ Pyrogram Versiyası: `{pyrover}`\n🔰 Python Versiyası: `{__python_version__}`\n👨‍🏭 İş Vaxtı Status: `{uptime}`"
+    alive = f"**Nədi nolub😒 {message.from_user.mention()}\n\nMənim Adım {Config.BOT_USERNAME}**\n⚡ Mən Süper İşləyirəm\n👨🏻‍💻 Sahibim: [{Config.ALIVE_NAME}](https://t.me/{Config.OWNER_NAME})\n🛡️ Bot Versiyası: `v{__version__}`\n🏷️ Pyrogram Versiyası: `{pyrover}`\n🔰 Python Versiyası: `{__python_version__}`\n👨‍🏭 İş Vaxtı Status: `{uptime}`"
 
     await message.reply_video(
         video=f"{Config.ALIVE_IMG}",
