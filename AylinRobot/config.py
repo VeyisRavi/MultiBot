@@ -1,12 +1,3 @@
-# @AylinRobot
-# Sahib @HuseynH
-# Repo Açığdısa İcazəsis Götürmə Oğlum
-# Reponu Satan Kodların Götürən Kimliyindən Aslı Olmayaraq Peysərdi
-
-# @AylinRobot
-# Sahib @HuseynH
-# Repo Açığdısa İcazəsis Götürmə Oğlum
-
 import os
 
 class Config:
