@@ -1,5 +1,5 @@
-# @MusicAzBot
-# Sahib @HuseynH
+# @TelegramRobotBot
+# Sahib : Ravi
 # Repo Açığdısa İcazəsis Götürmə
 
 
