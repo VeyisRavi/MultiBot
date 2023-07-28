@@ -1,0 +1,72 @@
+{
+    "name": "RaviVeyi ダ Music ve tag",
+    "description": "Pyrogram və Py-Tgcalls ilə Python dilində yazılmış teleqram videoçatları ve Etiketlemek  üçün VC Player ve Tag Botu.",
+    "logo": "https://te.legra.ph/file/f039e00ccd18d625f3771.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "Fallen",
+    "MusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "env": {
+      "API_ID": {
+        "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
+        "value": "26518206",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
+        "value": "aec735cd8214cafc055b4bcd62505844",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "Botfather-dən Bot nişanı",
+        "value": "6366792225:AAF17OP90oF2W1XfpKKdvHd2Y5ob6joZAFE",
+        "required": true
+      },
+        "PING_IMG": {
+        "description": "ping seklin yazin jpg",
+        "value": "https://telegra.ph/file/ed1c4c65dfdfc16415fa0.jpg",
+        "required": true
+            },
+      "OWNER_ID": {
+        "description": "İstifadəçi ID-nizi burada doldurun. (tam ədəd olmalıdır)",
+        "value": "5933799998",
+        "required": true
+      },
+      "SESSION": {
+        "description": "@Telegram-dan piroqram v2 sim seansı",
+        "value": "AgA3ewR6PpF5SgCSjq4GKnaPCLq9Ibyl9f8hhMLZHjMGKLladimQChl1Pn3gIpMuV2o5RKG07QwBqwam886196C0lI2uzDpB28VXCkKMtgCI3bFb7zpnyN986oZqyFJyqD3DIasN2GuXVWS6EMjrSh3liSs_uLzjZF1Nz5X8E9iMmwaNPY5t5dEy1SlVCwEp6JtuUhrn7tzVdIjB1omJnJtB00rK2A-f5-PfBuSeMgojDEvoyavcXjPBH09l2gbzXvPf6kG4qefqrt304ez0IjEuW_iLesMWcwJOp01AUMv5t6IAtpgyBtFNNQpUZk-8kxgh-3RWBRy6Ob4SjhjJEMOTAAAAAVs0JpQA",
+        "required": true
+      },
+      "SUDO_USERS": {
+        "description": "Sudo kimi əlavə etmək istədiyiniz istifadəçi(lər)in istifadəçi id(ləri). Çoxsaylı dəyərlər boşluqla ayrılmalıdır.",
+        "value": "5933799998",
+        "required": true
+      },
+        "SUPPORT_CHANNEL": {
+        "description": "Telegram dəstək qrupunuzun linki. (İctimaiyyətdə olmalıdır)",
+        "value": "https://t.me/MusicBotSup",
+        "required": false
+        },
+      "SUPPORT_CHAT": {
+        "description": "Telegram dəstək qrupunuzun linki. (İctimaiyyətdə olmalıdır)",
+        "value": "https://t.me/MusiqBotChat",
+        "required": false
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"
+    }
