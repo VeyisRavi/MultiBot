@@ -1,15 +1,15 @@
-# 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙍𝙤𝘽𝙤𝙩
+# ℝ𝕒𝕧𝕚𝔹𝕖𝕪 ℝ𝕠𝔹𝕠𝕥
 
 ━━━━━━━━━━━━━━━━━━━━
 
 <h2 align="center">
-    ──「 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙍𝙤𝘽𝙤𝙩 」──
+    ──「 ℝ𝕒𝕧𝕚𝔹𝕖𝕪 ℝ𝕠𝔹𝕠𝕥 」──
 </h2>
 
 ━━━━━━━━━━━━━━━━━━━━
 
 <b>HEROKU'LA DAĞIDIN</b>
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RaviBey/TelegramRoBot.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RaviBey/RaviBeyRoBot.git)
 
 ━━━━━━━━━━━━━━━━━━━━
 
