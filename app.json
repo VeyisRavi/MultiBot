@@ -13,47 +13,108 @@
     "env": {
       "API_ID": {
         "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
-        "value": "26518206",
+        "value": "",
         "required": true
       },
       "API_HASH": {
         "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
-        "value": "aec735cd8214cafc055b4bcd62505844",
+        "value": "",
         "required": true
       },
       "BOT_TOKEN": {
         "description": "Botfather-dən Bot nişanı",
-        "value": "6366792225:AAF17OP90oF2W1XfpKKdvHd2Y5ob6joZAFE",
+        "value": "",
         "required": true
       },
+        "OWNER_NAME": {
+        "description": "sahibin adi",
+        "value": "",
+        "required": true
+            },
+        "BOT_NAME": {
+        "description": "botun adi",
+        "value": "",
+        "required": true
+            },
+        "BOT_USERNAME": {
+        "description": "botun tag adi",
+        "value": "",
+        "required": true
+            },
+        "HEROKU_API_KEY": {
+        "description": "heraku key kodu",
+        "value": "",
+        "required": true
+            },
+        "LOG_CHANNEL": {
+        "description": "log group id si",
+        "value": "",
+        "required": true
+            },
+        "PLAYLIST_NAME": {
+        "description": "play lis kanalin linki",
+        "value": "",
+        "required": true
+            },
+        "PLAYLIST_ID": {
+        "description": "play lis kanalin id_s",
+        "value": "",
+        "required": true
+            },
+        "BAN_GROUP": {
+        "description": "ban group ids_s",
+        "value": "",
+        "required": true
+            },
+        "ALIVE_NAME": {
+        "description": "alive adi",
+        "value": "",
+        "required": true
+            },
+        "ALIVE_IMG": {
+        "description": "alive vidoe url yazin jpg",
+        "value": "",
+        "required": true
+            },
+        "START_IMG": {
+        "description": "start seklin yazin jpg",
+        "value": "",
+        "required": true
+            },
         "PING_IMG": {
         "description": "ping seklin yazin jpg",
-        "value": "https://telegra.ph/file/ed1c4c65dfdfc16415fa0.jpg",
+        "value": "",
         "required": true
             },
       "OWNER_ID": {
         "description": "İstifadəçi ID-nizi burada doldurun. (tam ədəd olmalıdır)",
-        "value": "5933799998",
+        "value": "",
+        "required": true
+      },
+        "MONGO_DB_URI": {
+        "description": "sessiyonu daxil ed",
+        "value": "",
         "required": true
       },
       "SESSION": {
         "description": "@Telegram-dan piroqram v2 sim seansı",
-        "value": "AgA3ewR6PpF5SgCSjq4GKnaPCLq9Ibyl9f8hhMLZHjMGKLladimQChl1Pn3gIpMuV2o5RKG07QwBqwam886196C0lI2uzDpB28VXCkKMtgCI3bFb7zpnyN986oZqyFJyqD3DIasN2GuXVWS6EMjrSh3liSs_uLzjZF1Nz5X8E9iMmwaNPY5t5dEy1SlVCwEp6JtuUhrn7tzVdIjB1omJnJtB00rK2A-f5-PfBuSeMgojDEvoyavcXjPBH09l2gbzXvPf6kG4qefqrt304ez0IjEuW_iLesMWcwJOp01AUMv5t6IAtpgyBtFNNQpUZk-8kxgh-3RWBRy6Ob4SjhjJEMOTAAAAAVs0JpQA",
+        "value": "",
         "required": true
       },
       "SUDO_USERS": {
         "description": "Sudo kimi əlavə etmək istədiyiniz istifadəçi(lər)in istifadəçi id(ləri). Çoxsaylı dəyərlər boşluqla ayrılmalıdır.",
-        "value": "5933799998",
+        "value": "",
         "required": true
       },
         "SUPPORT_CHANNEL": {
         "description": "Telegram dəstək qrupunuzun linki. (İctimaiyyətdə olmalıdır)",
-        "value": "https://t.me/MusicBotSup",
+        "value": "",
         "required": false
         },
-      "SUPPORT_CHAT": {
+
+        "SUPPORT_CHAT": {
         "description": "Telegram dəstək qrupunuzun linki. (İctimaiyyətdə olmalıdır)",
-        "value": "https://t.me/MusiqBotChat",
+        "value": ".",
         "required": false
       }
     },
