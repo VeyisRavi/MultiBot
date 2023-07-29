@@ -13,12 +13,12 @@
     "env": {
       "API_ID": {
         "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
-        "value": "",
+        "value": "27636997",
         "required": true
       },
       "API_HASH": {
         "description": "Bu dəyəri https://my.telegram.org saytından əldə edin",
-        "value": "",
+        "value": "3f9a83895cebf16a15b7c6b8b8b2a130",
         "required": true
       },
       "BOT_TOKEN": {
@@ -28,42 +28,42 @@
       },
         "OWNER_NAME": {
         "description": "sahibin adi",
-        "value": "",
+        "value": "𝐑𝐚𝐯𝐢 𝐁𝐞𝐲",
         "required": true
             },
         "BOT_NAME": {
         "description": "botun adi",
-        "value": "",
+        "value": "Robot",
         "required": true
             },
         "BOT_USERNAME": {
         "description": "botun tag adi",
-        "value": "",
+        "value": "TeleqramR0bot",
         "required": true
             },
         "HEROKU_API_KEY": {
         "description": "heraku key kodu",
-        "value": "",
+        "value": "5da79eae-83dd-4b9c-ba63-e0ed5dddbfe3",
         "required": true
             },
         "LOG_CHANNEL": {
         "description": "log group id si",
-        "value": "",
+        "value": "-1001869821513",
         "required": true
             },
         "PLAYLIST_NAME": {
         "description": "play lis kanalin linki",
-        "value": "",
+        "value": "Music Depo",
         "required": true
             },
         "PLAYLIST_ID": {
         "description": "play lis kanalin id_s",
-        "value": "",
+        "value": "https://t.me/DepoMusiqi",
         "required": true
             },
         "BAN_GROUP": {
         "description": "ban group ids_s",
-        "value": "",
+        "value": "https://t.me/RobotBans",
         "required": true
             },
         "ALIVE_NAME": {
@@ -73,48 +73,48 @@
             },
         "ALIVE_IMG": {
         "description": "alive vidoe url yazin jpg",
-        "value": "",
+        "value": "https://telegra.ph//file/e0429b2969c03d8663767.jpg",
         "required": true
             },
         "START_IMG": {
         "description": "start seklin yazin jpg",
-        "value": "",
+        "value": "https://telegra.ph//file/e0429b2969c03d8663767.jpg",
         "required": true
             },
         "PING_IMG": {
         "description": "ping seklin yazin jpg",
-        "value": "",
+        "value": "https://telegra.ph//file/e0429b2969c03d8663767.jpg",
         "required": true
             },
       "OWNER_ID": {
         "description": "İstifadəçi ID-nizi burada doldurun. (tam ədəd olmalıdır)",
-        "value": "",
+        "value": "6146532651",
         "required": true
       },
         "MONGO_DB_URI": {
         "description": "sessiyonu daxil ed",
-        "value": "",
+        "value": "mongodb+srv://rahidindi:rahidindi_1234@cluster0.ifslufs.mongodb.net/?retryWrites=true&w=majority",
         "required": true
       },
       "SESSION": {
         "description": "@Telegram-dan piroqram v2 sim seansı",
-        "value": "",
+        "value": "AgCeygUt10nhBS-4TU7Nwm-fUfUtgcWmkHbvD-k5bwsVEQtSr8AH-K8mjLbxLF_O7RXC2SGVmwyI8kjtuk4nWOo1rR8HDHyjdE7CmC1ugT-7KTxfxmWRXjjHikGiJfArR0GSAiit6Tgqc-TXKPNQutHP7hqyKrGHBD0EOJk5bVadUpWMdIcM14bmShBEZ4CwhCmYvOAzinwoWeXS1yXD_ty-OZXKob0CzSNSaMV5U_Z4Q4Pir1rYzEoAbXctXnqKcrTQZX_pqZaw8XfFeZclqlSJmAvgfjDplFelobgfTAgQRCnxlCZxTIQgSGGTyr6FwhcXzQZhHLt--m0f2y-fXF5tAAAAAVs0JpQA",
         "required": true
       },
       "SUDO_USERS": {
         "description": "Sudo kimi əlavə etmək istədiyiniz istifadəçi(lər)in istifadəçi id(ləri). Çoxsaylı dəyərlər boşluqla ayrılmalıdır.",
-        "value": "",
+        "value": "6146532651",
         "required": true
       },
         "SUPPORT_CHANNEL": {
         "description": "Telegram dəstək qrupunuzun linki. (İctimaiyyətdə olmalıdır)",
-        "value": "",
+        "value": "https://t.me/DepoRob0t",
         "required": false
         },
 
         "SUPPORT_CHAT": {
         "description": "Telegram dəstək qrupunuzun linki. (İctimaiyyətdə olmalıdır)",
-        "value": "",
+        "value": "https://t.me/RobotSup",
         "required": false
       }
     },
