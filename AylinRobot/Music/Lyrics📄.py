@@ -22,7 +22,7 @@ from pyrogram.types import (
 async def lyrics(_, message: Message):
     m = await message.delete()  
     if len(message.command) < 2:
-        return await message.reply_text("**İstifadə:** `/lyrics Tənha Adamlar`")
+        return await message.reply_text("**İstifadə:** `/lyrics Uzak Gelecekten`")
     m = await message.reply_text("✍️ Mahnı sözləri axtarılır...")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
