@@ -1,7 +1,3 @@
-# @AylinRobot
-# Sahib @HuseynH
-# Repo Açığdısa İcazəsis Götürmə Oğlum
-
 import os, youtube_dl, requests, aiohttp, wget, time, yt_dlp
 from yt_dlp import YoutubeDL
 from youtube_search import YoutubeSearch
