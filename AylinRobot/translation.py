@@ -18,7 +18,7 @@ class Translation(object):
 
     SAHIB_TEXT = """🔮 İstifadə: /stats\n💁 Açıqlama: Bot haqqında ümumi məlumat verər\n\n🔮 İstifadə: /block\n🚧 Açıqlama: İstifadəçini və ya qrupu bloklayar\n\n🔮 İstifadə: /unblock\n🗝️ Açıqlama: İstifadəçini və ya qrupun bloku açar\n\n🔮 İstifadə: /blocklist\n🗒️ Açıqlama: Blok olunanların siyahısını göstərər\n\n🔮 İstifadə: /broadcastall\n📢 Açıqlama: Qrupa və şəxsiyə yayım edər\n\n🔮 İstifadə: /gcast\n💬 Açıqlama: Qruplarda yayım edər\n\n🔮 İstifadə: /broadcast_pin\n🗣️ Açıqlama: Qruplarda yayım edər və sabitləyər\n\n🔮 İstifadə: /dyno\n🌐 Açıqlama: Heroku dyno miqdarını ölçər\n\n🔮 İstifadə: /pin\n📌 Açıqlama: Mesajı sabitləyər\n\n🔮 İstifadə: /unpin\n♦️ Açıqlama: Sabitləməni qaldırar"""
 
-    MUSIC_TEXT = """📀 İstifadə: /song\n➡️ Nümunə: `/song Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Musiqi yükləyər\n\n📀 İstifadə: /video\n➡️ Nümunə: `/video Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Video yükləyər\n\n📀 İstifadə: /lyrics\n➡️ Nümunə: `/lyrics Balaeli & Nefes - Gizli Esq`\n🎧 Açıqlama: Musiqinin sözlərini tapar"""
+    MUSIC_TEXT = """📀 İstifadə: /song\n➡️ Nümunə: `/song Defacto - Edyal`\n🎧 Açıqlama: Musiqi yükləyər\n\n📀 İstifadə: /video\n➡️ Nümunə: `/video Defacto - Edyal`\n🎧 Açıqlama: Video yükləyər\n\n📀 İstifadə: /lyrics\n➡️ Nümunə: `/lyrics Defacto - Edyal`\n🎧 Açıqlama: Musiqinin sözlərini tapar"""
 
     TELEGRAPH_TEXT = """🔮 İstifadə: /tgm\n🔗 Açıqlama: Şəkil, Video və ya GIF göndərərək link ala bilərsiniz"""
 
@@ -31,7 +31,7 @@ class Translation(object):
     ELAVELER_TEXT = """🔮 İstifadə: /carbon\n🖼️ Açıqlama: Yazdığınız mesajı şəkilə çevirər\n\n🔮 İstifadə: /purge\n🗑️ Açıqlama: Yanıtladığın sona kimi mesajları silər\n\n🔮 İstifadə: /id\n🆔 Açıqlama: İstifadəçi ID atar\n\n🔮 İstifadə: /info\nℹ️ Açıqlama: İstifadəçi haqqında məlumat atar\n\n🔮 İstifadə: /alive\n⚡ Açıqlama: Botun işlək olduğunu yoxlayar"""
 
 
-    AXTARIS_TEXT = """🔮 İstifadə: /github\n🧩 Nümunə: `/github Rahid2003`\n🕵️ Açıqlama: Github axtarışı edər\n\n🔮 İstifadə: /search\n🧩 Nümunə: `/search Balaeli & Nefes - Gizli Esq`\n🔍 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz"""
+    AXTARIS_TEXT = """🔮 İstifadə: /github\n🧩 Nümunə: `/github RaviBey`\n🕵️ Açıqlama: Github axtarışı edər\n\n🔮 İstifadə: /search\n🧩 Nümunə: `/search Defacto - Edyal`\n🔍 Açıqlama: YouTube axtarış üçün istifadə edə bilərsiniz"""
 
     TAGGER_TEXT = """🔮 İstifadə: /tag\n👥 Açıqlama: 5-li tağ edər\n\n🔮 İstifadə: /tektag\n👤 Açıqlama: Təkli tağ edər\n\n🔮 İstifadə: /stag\n📜 Açıqlama: Maraqlı sözlərlə tağ edər\n\n🔮 İstifadə: /etag\n🥰 Açıqlama: Emoji ilə tağ edər\n\n🔮 İstifadə: /btag\n🏴 Açıqlama: Bayraqlarla tağ edər\n\n🔮 İstifadə: /admin\n👨‍⚖️ Açıqlama: Qrup adminlərin siyahısı atar\n\n🔮 İstifadə: /cancel\n🛑 Açıqlama: Tağ prosesi dayandırar\n\n🔮 İstifadə: /bots\n🤖️ Açıqlama: Qrupda olan botları göstərir"""
 
