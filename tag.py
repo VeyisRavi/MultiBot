@@ -467,5 +467,5 @@ async def handler(event):
     return await event.reply("__Sən mənə sahib deyilsən!__")
   await event.reply('**Bot İşləyir Narahat olmayın**\n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯')
 
-print(">> Bot işləyir narahat olmayın.\n\n@RaviVeyis & @MaxActionChat Məlumat almaq üçün <<")
+print(">> Bot işləyir narahat olmayın.\n\n@TeleqramSeyxi Məlumat almaq üçün <<")
 dejavu.run_until_disconnected()
