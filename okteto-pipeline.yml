@@ -1,4 +1,19 @@
-icon: https://img.shields.io/github/v/release/TeamYukki/YukkiMusicBot?color=black&logo=github&logoColor=black&style=social
+build:
+  api:
+    context: api
+  frontend:
+    context: frontend
 deploy:
-    - okteto stack deploy --build -f docker-compose.yml
-# vars: [{"name": "BRANCH", "value": "master"}]
+  - helm upgrade --install movies chart --set api.image=${OKTETO_BUILD_API_IMAGE} --set frontend.image=${OKTETO_BUILD_FRONTEND_IMAGE}
+dev:
+  api:
+    command: ["bash"]
+    forward:
+      - 8080:8080
+      - 9229:9229
+    sync:
+      - api:/usr/src/app
+  frontend:
+    command: yarn start
+    sync:
+      - frontend:/usr/src/app
